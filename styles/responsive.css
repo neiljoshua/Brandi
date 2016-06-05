@@ -1,0 +1,191 @@
+@media (min-width: 979px){
+	.discuss .col:nth-child(2) {
+    	width: 64.5%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px ){
+	.discuss .col:nth-child(2) {
+    	width: 55%;
+	}
+}
+
+@media (max-width: 768px){
+
+	.inner{
+		padding-right: 20px;
+		padding-left: 20px;
+		margin: 0 auto;
+	}
+
+	.mobile {
+	    display: block;
+	    float: right;
+	    padding-top: 15px;
+	    font-size: 25px;
+		color:#fff;
+	    clear: both;
+	}
+
+	.menu{
+		visibility: hidden;
+		opacity: .1;
+		width: 100%;
+		right:0;
+		position: initial;
+		background-color:rgb(14,180,147); 
+	}
+
+	.menu li{
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+
+	.menu li a {
+	    display: block;
+	    padding: 15px 0;
+	}
+
+	.menu li a:hover{
+		border: none;
+	}
+
+	.visible{
+	    visibility: visible;
+	    transition: opacity 1.28s ease;
+	    opacity: 1;
+	}
+
+	.social {
+		margin-left: -50px;
+	}
+
+	.works .brand-box, .fun-facts .col {
+		width: 50%;
+	}
+
+	.discuss .col {
+		width: 100%;
+		float: none;
+		text-align: center;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+
+	.discuss .col:nth-child(2) {
+		width: 100%;
+	}
+	
+	.discuss .col h3{
+		padding: 0;
+	}
+
+	.discuss .col a {
+		display: inline-block;
+	}
+	.discuss .col label[for=name], .discuss .col label[for=email], 
+	.discuss .col label[for=message],.discuss .col input[type=text] {
+		width: 80%;
+		margin: 0 auto;
+		float: none;
+		padding-bottom: 20px;
+	}
+
+	.discuss .col .greenbox{
+		float: none;
+		margin: 0 auto;
+	}
+
+	footer .col .marg{
+		padding-right: 60px;
+	}
+
+	footer .col p{
+		padding-right: 25px;
+	}
+	
+	footer .col, footer .col:nth-child(3), footer .col.last{
+		width: 49%;
+	}
+
+	footer .col{
+		margin-right:0;
+	}
+} /* end of tablet */
+
+@media (max-width: 480px){
+
+	.brand a:after {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
+	.social {
+		margin-left: -52px;
+	}
+
+	.main-text h1 {
+    	font-size: 48px;
+	}
+
+	.main-text h2 {
+    	font-size: 34px;
+	}
+
+	.main-text p{
+		font-size: 15px;
+	}
+	.section-title .icon-line {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.works .brand-box, .fun-facts .col, footer .col, footer .col.last {
+		width: 100%;
+		margin: 0;
+	}
+
+	.discuss .col label[for=name], .discuss .col label[for=email], 
+	.discuss .col label[for=message],.discuss .col input[type=text] {
+		width: 100%;
+		
+	}
+
+	.discuss .col .greenbox {
+		float: none;
+		width: auto;
+	}
+
+
+	footer{
+		overflow: hidden;
+	}
+
+	footer .col, footer .col:nth-child(3), footer .col.last{
+		width: 100%;
+	}
+
+	footer .col img {
+		margin: 20px auto;
+	}
+
+	footer .col p{
+		padding: 0;
+	}
+
+	footer .col, footer .col .marg{
+		float: none;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+	}
+
+	footer .col, footer .col.last{
+		width: 100%;
+	}
+
+	footer .col.last{
+		padding-bottom: 20px;
+	}
+} /*End of mobile*/
