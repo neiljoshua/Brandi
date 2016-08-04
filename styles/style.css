@@ -1,3 +1,7 @@
+/*--
+Author: Neil J. Malpartida.
+Author URL: http://www.neiljoshua.com
+--*/
 * { margin: 0; padding: 0 }
 html { overflow-y: scroll}
 body { background:#ffffff; font-weight: 300;font-size: 13px; color: #666666; font-family: 'Raleway', 'Open Sans', Arial, helvetica, sans-serif}
@@ -63,7 +67,7 @@ nav{
 }
 
 nav.green-menu{
-    background-color:rgb(14,180,147);  
+    background-color: #0EB493;  
 }
 
 .green-menu .brand a:after {
@@ -90,7 +94,7 @@ nav.green-menu{
 	content: "";
     height: 19px;
     width: 2px;
-    background-color: rgb(14,180,147);
+    background-color: #0EB493;
     display: inline-block;
     padding-top: 3px;
     margin-left: 25px;
@@ -259,13 +263,8 @@ nav.green-menu{
   display: block;
 }
 
-#featuresSlider {
-	width: 80%;
-	margin: 0 10%;
-}
-
 #featuresSlider .col {
-	padding: 1%;	
+	padding: 10px;	
 }
 
 .features .col i {
@@ -300,17 +299,17 @@ nav.green-menu{
 
 /*--Works Section starts here-*/	
 
-.works .nav{
+.nav{
 	text-align: center;
 	padding-bottom: 30px;
 }
 
-.works .nav li{
+.nav li{
 	display: inline-block;
 	margin: 5px;
 }
 
-.works .nav li a {
+.nav li a {
 	text-decoration: none;
 	padding: 5px 10px 5px 10px;
 	font-size: 14px;
@@ -323,14 +322,15 @@ nav.green-menu{
 	background-color: #fff;
 }
 
-.works .nav li a:hover, .works .nav li a.active{
+.nav li a:hover, .nav li a.active{
 	background-color: #34B6A8;
 	color: #fff;
 	border-radius: 6px;
 	opacity: 1;
+	
 }
 
-.works .brand-box.active-img{
+.brand-box.active-img{
 	visibility: visible;
 	opacity: 0.3;
 	~webkit-transition: opacity 1.3s ease 0s;
@@ -338,50 +338,50 @@ nav.green-menu{
 	opacity: 1.5;
 }	
 
-.works .brand-box.inactive-img{
+.brand-box.inactive-img{
 	visibility: hidden;
 	opacity: 0.1;
 	width: 0;
 }	
 
-.works .brand-box{
+.brand-box{
 	float: left; 
 	width: 25%;	
 	position: relative; 
 	height: auto;	 
 }
 
-.works .details {
-	visibility: hidden;
+.details {
 	position: absolute;
-	text-align: center;
+	visibility: hidden;
 	width: 100%;
 	height: auto;
 	background: rgba(14,180,147,.9);
+	text-align: center;
 	color: #fff;	
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	opacity:0;
-	~webkit-transition: ease-in-out, opacity 1.3s ,ease-in-out; /* Safari 3.1 to 6.0 */
-	transition: opacity 1.3s;
+	~webkit-transition: 0.8s ease 0.4s; /* Safari 3.1 to 6.0 */
+	transition: 0.8s ease 0.4s ;
 }	
 
-.works .brand-box img {
+.brand-box img {
 	display: block;
 	width: 100%;
 	height: auto; 	
 }
 
-.works .brand-box:hover .details {
+.brand-box:hover .details {
 	visibility: visible;	
-	opacity: 1;
-	~webkit-transition-delay:0s;
-	transition-delay:0s;
+	~webkit-transition: opacity 0.8s ease 0.4s ;
+	transition: opacity 0.8s ease 0.4s ;
+	opacity: 0.8;
 }
 
- .works .brand-box .details i{
+ .brand-box .details i{
 	display: block;
 	margin: 0 auto;
 	color: #fff;
@@ -396,11 +396,11 @@ nav.green-menu{
 	margin-bottom: 8%;
 }
 
-.works .brand-box .details h2 {
+.brand-box .details h2 {
 	font-size: 15px;	
 }	
 
-.works .brand-box .details p {
+.brand-box .details p {
 	font-size: 12px;
 }
 
@@ -486,27 +486,40 @@ nav.green-menu{
 /*-- Discuss container starts here--*/
 
 .discuss{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
 	margin-bottom: 50px;
+	height: 250px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
-.discuss .col {
-	width: auto;
-  	float: left;
-  	padding-right: 5px;
-  	padding-left: 5px;
+.discuss div:first-child{
+	position: absolute;
+	width: 25%;
+	left:0;
 }
 
-.discuss .col:last-child{
-	padding-right: 0;
-	display: block;
-	font-size: 20px;
+.discuss div:nth-child(2){
+	position: absolute;
+	width: 65%;
+	left: 31%;
+}
+
+.discuss div:nth-child(3){
+	position: absolute;
+	width: 5%;
+	right: 0;
+	text-align: right;
 }
 
 .discuss  .col h3 {
 	font-size: 14px;
 	padding-top: 5px;
 	padding-bottom: 10px;
-	padding-right: 20px;
 	font-weight: 600;
 }
 
@@ -527,10 +540,6 @@ nav.green-menu{
 	display: block;
 	font-size: 20px;
 	margin-bottom: 10px;
-}
-
-.discuss .col:nth-child(2) {
-	width: 61.5%;
 }
 	
 .discuss .col label {
@@ -583,7 +592,7 @@ nav.green-menu{
 	margin-bottom: 0;
 }
 
-.discuss .col .greenbox i{
+.discuss .col  .greenbox i{
 	display: inline-block;
 	width: 20px;
 	margin-right:10px;

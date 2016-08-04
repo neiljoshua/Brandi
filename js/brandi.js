@@ -39,12 +39,12 @@ $(document).ready(function() {
     // Filter images
     var activeImg = $('.works').find("[data-type='" + linkHref + "']");
     //console.log(activeImg);
-    $('.works .brand-box').removeClass('active-img').addClass('inactive-img');
+    $('.brand-box').removeClass('active-img').addClass('inactive-img');
     activeImg.removeClass('inactive-img').addClass('active-img');
 
     // Show all images
     if(linkHref=="allPhotos"){
-      $('.works .brand-box').removeClass('inactive-img').addClass('active-img');
+      $('.brand-box').removeClass('inactive-img').addClass('active-img');
 
     }
 
