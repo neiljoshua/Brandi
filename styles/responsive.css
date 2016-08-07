@@ -1,42 +1,11 @@
-@media (max-width: : 1064px){
-	.discuss .col:nth-child(2) {
-    	width: 67%;
-	}
-	footer .col{
-		width: 23%;
-		margin-right: 25px;
-	}
-	footer .col .marg {
-		margin-right: 40px;
-	}	
-	footer .col:nth-child(3) {
-    	width: 25%;
-	}
-	footer .col:last-child{
-		width: 23%;	
-	}
-}
 
-@media (max-width: 979px){
-	.discuss .col:nth-child(2) {
-    	width: 53%;
-	}
-
-	footer .col .marg {
-		margin-right: 8px;
-	}
-	footer .col .marg:last-child {
-		margin-right: 0;
-	}
-	
-}
-
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
 	.inner{
 		padding-right: 20px;
 		padding-left: 20px;
 		margin: 0 auto;
+		max-width: 100%;
 	}
 
 	.mobile {
@@ -48,16 +17,17 @@
 	    clear: both;
 	}
 
-	.menu{
+	.menu {
 		visibility: hidden;
-		opacity: .1;
 		width: 100%;
 		right:0;
+		opacity: 0;
 		position: initial;
 		background-color:rgb(14,180,147); 
+		transition: opacity 0.6s ease;
 	}
 
-	.menu li{
+	.menu li {
 		display: block;
 		width: 100%;
 		padding: 0;
@@ -72,9 +42,9 @@
 		border: none;
 	}
 
-	.visible{
+	.visible {
 	    visibility: visible;
-	    transition: opacity 1.28s ease;
+	    transition: opacity 0.6s ease;
 	    opacity: 1;
 	}
 
@@ -86,56 +56,58 @@
 		width: 50%;
 	}
 
-	.discuss .col {
+	.discuss-col, .discuss-col.right, .discuss-col.center, .discuss-col.left {
+		text-align: center;
+		position: relative;
 		width: 100%;
 		float: none;
-		text-align: center;
 		padding: 0;
+		left: 0;
 		margin-bottom: 20px;
 	}
 
-	.discuss .col:nth-child(2) {
+	.discuss-col i {
+    	display: inline-block;
+    }
+
+    .discuss-col label[for=name], .discuss-col label[for=email], 
+	.discuss-col label[for=message],.discuss-col input[type=text] {
 		width: 100%;
 	}
-	
-	.discuss .col h3{
-		padding: 0;
-	}
 
-	.discuss .col a {
-		display: inline-block;
-	}
-	.discuss .col label[for=name], .discuss .col label[for=email], 
-	.discuss .col label[for=message],.discuss .col input[type=text] {
-		width: 80%;
-		margin: 0 auto;
+	.send-message {
 		float: none;
-		padding-bottom: 20px;
+		width: 100%;
+		text-align: center;
 	}
 
-	.discuss .col .greenbox{
-		float: none;
-		margin: 0 auto;
-	}
-
-	footer .col .marg{
-		padding-right: 60px;
-	}
-
-	footer .col p{
-		padding-right: 25px;
-	}
-	
-	footer .col, footer .col:nth-child(3), footer .col.last{
-		width: 49%;
-	}
-
-	footer .col{
-		margin-right:0;
-	}
+    	
 } /* end of tablet */
 
 @media (max-width: 480px){
+
+	#home-slider .item img{
+		height: 100vh;
+	}
+	.main-text{
+		top: 34%;
+	}
+
+	.main-text h1 {
+		font-size: 35px;
+	}
+
+	.main-text h2 {
+		font-size: 30px;
+	}
+
+	.main-text p {
+		font-size: 13px;
+	}
+
+	.main-text p:before, .main-text p:after{
+		width: 15px;
+	}
 
 	.brand a:after {
 		margin-right: 15px;
@@ -155,7 +127,7 @@
 	}
 
 	.main-text p{
-		font-size: 15px;
+		font-size: 13px;
 	}
 	.section-title .icon-line {
 		margin-right: 0;
@@ -167,46 +139,26 @@
 		margin: 0;
 	}
 
-	.discuss .col label[for=name], .discuss .col label[for=email], 
-	.discuss .col label[for=message],.discuss .col input[type=text] {
-		width: 100%;
-		
-	}
-
-	.discuss .col .greenbox {
-		float: none;
-		width: auto;
-	}
 
 
 	footer{
 		overflow: hidden;
 	}
 
-	footer .col, footer .col:nth-child(3), footer .col.last{
+	footer .col-footer, footer .col-footer.last{
 		width: 100%;
-	}
-
-	footer .col img {
-		margin: 20px auto;
-	}
-
-	footer .col p{
-		padding: 0;
-	}
-
-	footer .col, footer .col .marg{
 		float: none;
-		text-align: center;
-		padding: 0;
 		margin: 0;
-	}
-
-	footer .col, footer .col.last{
-		width: 100%;
-	}
-
-	footer .col.last{
 		padding-bottom: 20px;
 	}
+
+	.col-footer h2, .col-footer h3, .col-footer p{
+		text-align: center; 
+	}
+
+	.col-footer img {
+		margin: 0 auto;
+		padding-bottom: 20px;
+	}
+
 } /*End of mobile*/
