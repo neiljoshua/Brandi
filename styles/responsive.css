@@ -42,14 +42,20 @@
 		border: none;
 	}
 
+	section h2 {
+		padding-top: 25px;
+		font-size: 24px;
+	}
+
+	.section-title {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
 	.visible {
 	    visibility: visible;
 	    transition: opacity 0.6s ease;
 	    opacity: 1;
-	}
-
-	.social {
-		margin-left: -50px;
 	}
 
 	.works .brand-box, .fun-facts .col {
@@ -87,25 +93,26 @@
 @media (max-width: 480px){
 
 	#home-slider .item img{
-		height: 100vh;
-	}
-	.main-text{
-		top: 34%;
+		height: 55vh;
 	}
 
-	.main-text h1 {
+	header .owl-theme .owl-controls {
+		top: 130px;
+	}
+
+	.lead-text h1 {
 		font-size: 35px;
 	}
 
-	.main-text h2 {
+	.lead-text h2 {
 		font-size: 30px;
 	}
 
-	.main-text p {
+	.lead-text p {
 		font-size: 13px;
 	}
 
-	.main-text p:before, .main-text p:after{
+	.lead-text p:before, .lead-text p:after{
 		width: 15px;
 	}
 
@@ -114,24 +121,45 @@
 		margin-left: 15px;
 	}
 
+	.lead-text h1, .lead-text h2, .lead-text p {
+		color: #666;
+		margin-top: 15px;
+	}
+	.lead-text h1 {
+    	font-size: 25px;
+	}
+
+	.lead-text h2 {
+    	font-size: 20px;
+	}
+
+	.lead-text p{
+		font-size: 15px;
+		padding-bottom: 20px;
+	}
+
+	.social , .lead-text {
+		position: relative;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
 	.social {
-		margin-left: -52px;
+		bottom: 0;
 	}
 
-	.main-text h1 {
-    	font-size: 48px;
-	}
-
-	.main-text h2 {
-    	font-size: 34px;
-	}
-
-	.main-text p{
-		font-size: 13px;
-	}
+	.social i:hover {
+		color: #0EB493;
+	}	
 	.section-title .icon-line {
 		margin-right: 0;
 		margin-left: 0;
+	}
+
+	.discuss-col button{
+		float: none;
+		display: block;
+		margin:0 auto;
 	}
 
 	.works .brand-box, .fun-facts .col, footer .col, footer .col.last {
