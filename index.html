@@ -326,18 +326,22 @@
               <h3>Say Hello!</h3>
               <form>
                   <label for="name">Name:
-                      <input type="text" name="name" id="name">
+                      <input name="user-name" type="text" id="name" placeholder="John Smith">
                   </label>
                   <label for="email">Email:
-                      <input type="text" name="email" id="email">
+                      <input name="user-email" type="text" id="email" placeholder="johnsmith@example.com" required>
                   </label>
                   <label for="message">Message:
-                      <input type="text" name="message" id="message">
+                      <input name="user-message" type="text" id="message" placeholder="Drop us a line!" required>
                   </label>
-                  <button type="submit" name="submitbutton">
+                  <button type="submit">
                     <i class="icon-mail-1"></i>Send Message
                   </button>
               </form>
+              <div class="success">
+                  <p>Thank You!</p>
+                  <button class="close-success">Close</button>
+              </div>
           </div>    
           <div class="discuss-col right"> 
               <a href="#"><i class="icon-behance"></i></a>

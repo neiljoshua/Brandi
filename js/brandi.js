@@ -53,17 +53,6 @@ $(document).ready(function() {
 
   filterLinks();
 
-  function unhideImag() {
-   //var el = document.getElementByClassName('myimgclass')
-   //var el = $('.works img').attr('data-type')
-   //var item = document.getAttribute('data-type');
-   // if (item==linkHref) {
-   //  item.className=(item.className=='hidden')?'unhidden':'hidden';
-   // }
-  }  
-
-  unhideImag();
-
   function homeSlider(){
 
 
@@ -74,7 +63,6 @@ $(document).ready(function() {
         paginationSpeed : 400,
         singleItem:true, 
         autoPlay: true,
-        // "singleItem:true" is a shortcut for:
         // items : 4, 
         // itemsDesktop : false,
         // itemsDesktopSmall : false,
@@ -103,6 +91,63 @@ $(document).ready(function() {
  
   });
 
+$('form').submit(function(e) {
+
+    e.preventDefault();
+
+    var $form  = $(this);
+    var $email = $("#email");
+    if ( !window.validateEmail( $email.val() ) &&  ( $email.prop('required') ) ) {
+      $email.parent().addClass('invalid');
+      $(".error").fadeTo(400, 1);
+
+    } else {
+
+    $email.parent().removeClass('invalid')
+    $(".error").fadeTo(400, 0);
+     var url = "contact.php"; // the script where you handle the form input.
+      $.ajax({
+         type: "POST",
+         url: url,
+         data: $("#contact-form").serialize(),
+         success: function(data)
+         {
+               $('.success').fadeTo(400, 1);
+               $('form input').val('');
+         }
+       });
+      return false;
+    }
+});
+
+// Form Validation
+window.validateEmail = function( emails ) {
+
+      var errors       = 0;
+      var emailArray   = (emails == null) ? [] :emails.split(',');
+      var expression   = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      $(emailArray).each(function(index, email){
+
+        if( !expression.test( email.trim() ) ){
+          errors++;
+        }
+
+      });
+
+      if( errors > 0 ){
+        return false;
+      }else{
+        return true;
+      }
+
+  }
+
+ $('.close-success').on('click', function(e) {
+    e.preventDefault();
+    $('.success').fadeTo(400, 0);
+    // body...
+  })
 
 // mobile menu
 $('.icon-menu').on('click', function(){

@@ -402,6 +402,7 @@ nav.green-menu{
 .details {
 	position: absolute;
 	visibility: hidden;
+	opacity: 0;
 	width: 100%;
 	height: auto;
 	background: rgba(14,180,147,.9);
@@ -412,21 +413,21 @@ nav.green-menu{
 	left: 0;
 	right: 0;
 	opacity:0;
-	~webkit-transition: 0.6s ease; /* Safari 3.1 to 6.0 */
-	transition: 0.6s ease;
+	~webkit-transition: 1.5s ease; /* Safari 3.1 to 6.0 */
+	transition: 1.5s ease;
 }	
 
 .brand-box img {
 	display: block;
 	width: 100%;
-	height: auto; 	
+	height: auto;
 }
 
 .brand-box:hover .details {
 	visibility: visible;	
-	~webkit-transition: opacity 0.8s ease 0.4s ;
-	transition: opacity 0.8s ease 0.4s ;
-	opacity: 0.8;
+	~webkit-transition: opacity 1.5s ease;
+	transition: opacity 1.5s ease;
+	opacity: 1;
 	cursor: pointer;
 }
 
@@ -553,6 +554,7 @@ nav.green-menu{
 }
 
 .discuss-col.center {
+	position: relative;
 	width: 70%;
 }
 
@@ -569,6 +571,22 @@ nav.green-menu{
 
 form {
 	margin: 25px 0;
+}
+
+input:focus::-webkit-input-placeholder {
+   color: transparent;
+}
+
+input:focus:-moz-placeholder {
+   color: transparent;
+}
+
+input:focus::-moz-placeholder {
+   color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+   color: transparent;
 }
 
 .discuss-col i {
@@ -601,6 +619,46 @@ form {
 .discuss-col label[for=message] {
 	width: 100%;
 	margin-bottom: 10px;
+}
+
+.error {
+	display: none;
+	padding: 0;
+	margin-top: -10px;
+	color: red;
+	font-size: 13px;
+}
+
+.success {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left:0;
+	bottom: 0;
+	background-color: #fff;
+	border: 1px solid #D3D3D3;
+}
+
+.success p {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.discuss-col .close-success {
+	position: absolute;
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 10px 30px;
+    font-size: 13px;
+    border-radius: 5px;
+    background: #0EB493;
+    color: #fff;
+    border: none;
+    outline: none;
 }
 
 .discuss-col button {
