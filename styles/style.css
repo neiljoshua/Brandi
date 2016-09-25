@@ -612,6 +612,10 @@ input:focus:-ms-input-placeholder {
 	outline: none;
 }
 
+.invalid input {
+	border-bottom: 1px solid red;
+}
+
 .discuss-col label[for=name], .discuss-col label[for=email] {
 	width: 47%;
 }
