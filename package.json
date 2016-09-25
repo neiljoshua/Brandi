@@ -1,0 +1,27 @@
+{
+  "name": "brandi",
+  "version": "1.0.0",
+  "description": "Web developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neiljoshua/brandi.git"
+  },
+  "keywords": [
+    "/"
+  ],
+  "author": "@neiljoshua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neiljoshua/brandi/issues"
+  },
+  "homepage": "https://github.com/neiljoshua/brandi#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}
