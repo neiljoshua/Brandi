@@ -476,7 +476,7 @@ nav.green-menu{
 	margin: 0 auto; 
 }
 
-.team .col h3, .team .col p{
+.team .col h3 {
 	padding-top: 40px;
 }
 
@@ -631,6 +631,7 @@ input:focus:-ms-input-placeholder {
 
 .success {
 	display: none;
+	opacity: 0;
 	position: absolute;
 	top: 0;
 	right: 0;

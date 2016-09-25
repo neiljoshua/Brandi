@@ -145,8 +145,8 @@ window.validateEmail = function( emails ) {
 
  $('.close-success').on('click', function(e) {
     e.preventDefault();
-    $('.success').fadeTo(400, 0);
-    // body...
+    $('.success').fadeTo(400, 0); // fadeTo is not removing display block
+    $('.success').hide();
   })
 
 // mobile menu
