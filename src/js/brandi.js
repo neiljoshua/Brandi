@@ -63,11 +63,6 @@ $(document).ready(function() {
         paginationSpeed : 400,
         singleItem:true, 
         autoPlay: true,
-        // items : 4, 
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false,
     });
   }
 
