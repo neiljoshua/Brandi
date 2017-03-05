@@ -1,5 +1,20 @@
 $(document).ready(function() {
 
+  var $window = $(window);
+  var $hero = $('.hero-content');
+
+  function checkWidth(){
+    if ($window.width() < 600) {
+      $hero.removeClass('center');
+    } else {
+      $hero.addClass('center');
+    }
+  };
+
+  checkWidth();
+
+  $(window).resize(checkWidth);
+
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
@@ -19,9 +34,11 @@ $(document).ready(function() {
     $(window).scroll (function () {
           var sT = $(this).scrollTop();
               if (sT >= 200) {
-                  $('header nav').addClass('green-menu');
+                  $('.header-site').addClass('green-menu');
+                  $('.logo').addClass('green');
               }else {
-                  $('header nav').removeClass('green-menu');
+                  $('.header-site').removeClass('green-menu');
+                  $('.logo').removeClass('green');
               }
     })
   }
@@ -60,13 +77,13 @@ $(document).ready(function() {
    
         navigation : false, // Show next and prev buttons
         slideSpeed : 300,
-        paginationSpeed : 400,
+        paginationSpeed : 300,
         singleItem:true, 
         autoPlay: true,
     });
   }
 
- homeSlider();
+  homeSlider();
 
    $("#featuresSlider").owlCarousel({
       autoPlay: 3000, //Set AutoPlay to 3 seconds

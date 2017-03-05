@@ -4,57 +4,57 @@
 
   <head>
       <title>Brandi</title>
-
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <link rel="stylesheet" type="text/css" href="styles.css">
-      <link href='https://fonts.googleapis.com/css?family=Raleway:100,300,500,600,700' rel='stylesheet' type='text/css'>
-      <script src="vendor.min.js"></script> 
+      <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+      <link rel="stylesheet" type="text/css" href="vendors.css">
+      <script src="plugins.min.js"></script>
       <script src="brandi.min.js"></script>
   </head>
 
   <body>
-  <!--How to make comments on HTML!!-->  
-  <header id="header"> 
-      <div id="home-slider" class="owl-carousel owl-theme">
-          <div class="item"><img src="src/images/hero1.jpg" alt="slide1" ></div>
-          <div class="item"><img src="src/images/hero2.jpg" alt="slide2" ></div>
-          <div class="item"><img src="src/images/hero3.jpg" alt="slide3" ></div> 
-      </div>
-      <nav>
-          <div class="inner">
-              <div class="brand">
-                  <a href="#"><img src="src/images/logo.png"/></a>
-                  <p> I am your tag line </p>
-              </div>
-              <i class="mobile demo-icon icon-menu"></i>
-          </div>
-          <ul class="menu">
-              <li><a href="#header">Home</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#works">Works</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#contact">Contact</a></li>
-          </ul>
-      </nav>  
-      <div class="lead-text">
-          <h1> Meet <span class="bold">Brandi</span>!</h1>
-          <h2> <span class="green"> /creative </span> one page template.</h2>
-          <p> We are a team of professionals</p>  
-      </div>
-      <div class="social">
-          <a href="#"><i class="demo-icon icon-twitter"></i></a>
-          <a href="#"><i class="demo-icon icon-facebook"></i></a>
-          <a href="#"><i class="demo-icon icon-gplus"></i></a>
-          <a href="#"><i class="demo-icon icon-dribbble"></i></a>
-      </div>   
-  </header> 
+  <!-- header section -->
+  <header class="header-site"> 
+    
+    <a href="#" class="c-hamburger c-hamburger--rot"> <span>toggle menu</span> </a> 
+    <div class="logo">
+      <a href="#"><img src="src/images/logo.png"/></a>
+      <p>I am your tag line </p>
+    </div>
+    <ul class="menu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-  <section id="features" class="features">
+  </header>    
+  <!-- Hero section -->
+  <div class="hero-page"> 
+    <div id="home-slider" class="owl-carousel owl-theme">
+      <div class="item"><img src="src/images/hero1.jpg" alt="slide1" ></div>
+      <div class="item"><img src="src/images/hero2.jpg" alt="slide2" ></div>
+      <div class="item"><img src="src/images/hero3.jpg" alt="slide3" ></div> 
+    </div>
+    <div class="hero-content center">
+      <h1> Meet <span class="bold">Brandi</span>!</h1>
+      <h2> <span class="green"> /creative </span> one page template.</h2>
+      <p> We are a team of professionals </p>  
+    </div>
+    <div class="social">
+      <a href="#"><i class="demo-icon icon-twitter"></i></a>
+      <a href="#"><i class="demo-icon icon-facebook"></i></a>
+      <a href="#"><i class="demo-icon icon-gplus"></i></a>
+      <a href="#"><i class="demo-icon icon-dribbble"></i></a>
+    </div>   
+  </div> 
+
+  <div id="features" class="features">
       <h2>FEATURES</h2>
-      <div class="section-title">    
-          <span class="icon-line"></span>
+      <div class="heart-icon">    
+          <span></span>
           <i class="demo-icon icon-heart-empty"></i>
-          <span class="icon-line"></span>
+          <span></span>
       </div>
       <div class="inner">  
         <div id="featuresSlider">
@@ -103,14 +103,14 @@
           </div>   
         </div>  
       <div class="clearfix"></div>              
-  </section>
+  </div>
     
-  <section id="works" class="works">
+  <div id="works" class="works">
         <h2>WORKS</h2>
-        <div class="section-title">
-              <span class="icon-line"></span>
+        <div class="heart-icon">
+              <span></span>
               <i class="demo-icon icon-heart-empty"></i>
-              <span class="icon-line"></span>
+              <span></span>
               <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
               </p>
         </div>
@@ -186,16 +186,16 @@
             </div>
         </div>
         <div class="clearfix"></div>         
-  </section>
+  </div>
 
 <!--How to make comments on HTML!!-->
 
-  <section id="team" class="team">
+  <div id="team" class="team">
       <h2>MEET OUR TEAM</h2> 
-      <div class="section-title">
-          <span class="icon-line"></span>
+      <div class="heart-icon">
+          <span></span>
           <i class="demo-icon icon-heart-empty"></i>
-          <span class="icon-line"></span>
+          <span></span>
           <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
           </p>
       </div>  
@@ -258,14 +258,14 @@
            </div>   
      </div>           
      <div class="clearfix"> </div>        
-  </section>  
+  </div>  
 
-  <section class="fun-facts">
+  <div class="fun-facts">
       <h2>SOME FUN FACTS</h2>
-      <div class="section-title">
-            <span class="icon-line"></span>
+      <div class="heart-icon">
+            <span></span>
             <i class="demo-icon icon-heart-empty"></i>
-            <span class="icon-line"></span>
+            <span></span>
       </div>
       <div class="inner">
           <div class="col">
@@ -290,14 +290,14 @@
           </div>      
           <div class="clearfix"> </div>   
       </div>
-  </section>  
+  </div>  
   
-  <section id="contact" >
+  <div id="contact" >
       <h2>LET'S DISCUSS</h2>
-      <div class="section-title">
-          <span class="icon-line"></span>
+      <div class="heart-icon">
+          <span></span>
           <i class="demo-icon icon-heart-empty"></i>
-          <span class="icon-line"></span>
+          <span></span>
           <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
       </div>
       <div class="inner">   
@@ -309,9 +309,9 @@
                 www.neiljoshua.com<br>
               </p>
          </div>    
-          <div class="discuss-col center">
+          <div class="discuss-col center-col">
               <h3>Say Hello!</h3>
-              <form>
+              <form class="form">
                   <label for="name">Name:
                       <input name="user-name" type="text" id="name" placeholder="John Smith">
                   </label>
@@ -321,7 +321,7 @@
                   <label for="message">Message:
                       <input name="user-message" type="text" id="message" placeholder="Drop us a line!" required>
                   </label>
-                  <button type="submit">
+                  <button class="submit" type="submit">
                     <i class="icon-mail-1"></i>Send Message
                   </button>
               </form>
@@ -339,11 +339,12 @@
           </div>   
        </div> 
        <div class="clearfix"> </div>           
-  </section>
-  <!--Help with labels and inputs..-->  
-  <section class="map1">
+  </div>
+
+
+  <div class="map1">
       
-  </section>
+  </div>
 
   <footer>
     <div class="inner">

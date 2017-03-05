@@ -1,0 +1,38 @@
+.fun-facts{
+	background: url('/src/images/city.jpg');
+	color: $white;	
+	margin: 0 auto;
+  clear: both;
+	overflow: hidden;
+
+	.col {
+	 	width: 25%;
+	 	float: left;
+  	text-align: center;
+  	padding: 35px 0;
+  	i{
+			display: block;
+			margin: 0 auto;
+			font-size: 40px;
+			text-align: center;
+			width: 120px;
+			height: 120px;
+			line-height: 120px;
+			border: 1px white solid;
+			border-radius: 50%;
+		}
+		h3, p {
+			margin: 30px 0;
+		}
+		h3 {
+			font-size: 45px;
+			font-family: 'PlayFair-thin';
+		}
+		p {
+			font-weight: 100;
+			letter-spacing: 1px;
+			font-family: 'RobotoSlab-thin';
+		}
+	}
+
+}

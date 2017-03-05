@@ -1,0 +1,21 @@
+.form {
+	margin: 25px 0;
+	text-align: left;
+
+	input:focus:-webkit-input-placeholder {
+	   color: transparent;
+	}
+
+	input:focus:-moz-placeholder {
+	   color: transparent;
+	}
+
+	input:focus:-moz-placeholder {
+	   color: transparent;
+	}
+
+	input:focus:-ms-input-placeholder {
+	   color: transparent;
+	}
+
+}

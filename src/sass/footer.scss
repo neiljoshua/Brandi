@@ -1,0 +1,40 @@
+footer {
+	background: $green;
+	padding: 50px 0;
+	clear: both;
+	overflow: hidden;
+	img {
+		margin-bottom: 30px;
+	}
+	p {
+		line-height: 2;
+		max-width: 220px;
+	}
+}
+
+.col-footer {
+	display: block;
+	width: 35%;
+	float: left;
+	&.last {
+		width: 30%;
+	}
+	
+}
+
+@include media(mobile){
+
+
+	.col-footer {
+		width: 100%;
+		&.last {
+			width: 100%;
+		}
+	}
+	footer {
+		p {
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+}
