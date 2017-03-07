@@ -99,13 +99,12 @@ button {
 
 /* line 10, ../sass/hamburger.scss */
 .c-hamburger {
+  position: fixed;
   display: none;
-  float: right;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
   overflow: hidden;
-  margin: 0;
+  margin: 10px;
   padding: 0;
   width: 40px;
   height: 40px;
@@ -118,11 +117,11 @@ button {
   cursor: pointer;
   z-index: 2000;
 }
-/* line 30, ../sass/hamburger.scss */
+/* line 29, ../sass/hamburger.scss */
 .c-hamburger:focus {
   outline: none;
 }
-/* line 33, ../sass/hamburger.scss */
+/* line 32, ../sass/hamburger.scss */
 .c-hamburger span {
   display: block;
   position: absolute;
@@ -133,7 +132,7 @@ button {
   border-radius: 20px;
   background: #fff;
 }
-/* line 42, ../sass/hamburger.scss */
+/* line 41, ../sass/hamburger.scss */
 .c-hamburger span::before, .c-hamburger span::after {
   position: absolute;
   display: block;
@@ -144,34 +143,34 @@ button {
   background-color: #fff;
   content: "";
 }
-/* line 52, ../sass/hamburger.scss */
+/* line 51, ../sass/hamburger.scss */
 .c-hamburger span::before {
   top: -8px;
 }
-/* line 55, ../sass/hamburger.scss */
+/* line 54, ../sass/hamburger.scss */
 .c-hamburger span::after {
   bottom: -8px;
 }
 
-/* line 63, ../sass/hamburger.scss */
+/* line 62, ../sass/hamburger.scss */
 .c-hamburger--rot span {
   transition: background 0s;
 }
-/* line 65, ../sass/hamburger.scss */
+/* line 64, ../sass/hamburger.scss */
 .c-hamburger--rot span::before {
   transition-property: top, transform;
 }
-/* line 69, ../sass/hamburger.scss */
+/* line 68, ../sass/hamburger.scss */
 .c-hamburger--rot span::after {
   transition-property: bottom, transform;
 }
 
 /* active state, i.e. menu open */
-/* line 78, ../sass/hamburger.scss */
+/* line 77, ../sass/hamburger.scss */
 .c-hamburger--rot.is-active span {
   background: none;
 }
-/* line 80, ../sass/hamburger.scss */
+/* line 79, ../sass/hamburger.scss */
 .c-hamburger--rot.is-active span::before {
   top: 0;
   -webkit-transform: rotate(45deg);
@@ -179,7 +178,7 @@ button {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 86, ../sass/hamburger.scss */
+/* line 85, ../sass/hamburger.scss */
 .c-hamburger--rot.is-active span::after {
   bottom: 0;
   -webkit-transform: rotate(-45deg);
@@ -189,7 +188,7 @@ button {
 }
 
 @media (max-width: 980px) {
-  /* line 96, ../sass/hamburger.scss */
+  /* line 95, ../sass/hamburger.scss */
   .c-hamburger {
     display: block;
   }
@@ -249,39 +248,52 @@ button {
   /* Safari, Android, iOS */
 }
 /* line 1, ../sass/header.scss */
+.logo.green-menu {
+  background-color: #0EB493;
+}
+/* line 4, ../sass/header.scss */
+.logo.green-menu a:after {
+  background-color: #fff;
+}
+
+/* line 10, ../sass/header.scss */
 .header-site {
   width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(16, 22, 54, 0.2);
-  z-index: 100;
+  left: 300px;
+  z-index: 1800;
   max-height: 55px;
   clear: both;
-  overflow: hidden;
-}
-/* line 12, ../sass/header.scss */
-.header-site.green-menu {
-  background-color: #0EB493;
 }
 
-/* line 17, ../sass/header.scss */
+/* line 20, ../sass/header.scss */
 .logo {
+  position: fixed;
   display: block;
-  float: left;
-  margin: 5px 0 0 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(16, 22, 54, 0.2);
+  padding: 5px 0 0 20px;
+  max-height: 50px;
   clear: both;
   overflow: hidden;
   color: #fff;
   z-index: 1500;
 }
-/* line 25, ../sass/header.scss */
+/* line 34, ../sass/header.scss */
 .logo a, .logo p {
   display: block;
   float: left;
 }
-/* line 30, ../sass/header.scss */
+/* line 38, ../sass/header.scss */
+.logo a {
+  position: relative;
+  z-index: 2000;
+}
+/* line 41, ../sass/header.scss */
 .logo a:after {
   content: "";
   height: 19px;
@@ -293,45 +305,105 @@ button {
   margin-right: 15px;
   margin-top: 10px;
 }
-/* line 42, ../sass/header.scss */
+/* line 52, ../sass/header.scss */
+.logo a:hover {
+  cursor: pointer;
+}
+/* line 56, ../sass/header.scss */
 .logo p {
   padding-top: 16px;
   font-size: 14px;
   color: #595959;
 }
-/* line 49, ../sass/header.scss */
-.logo.green a:after {
-  background-color: #fff;
-}
 
-/* line 56, ../sass/header.scss */
-.menu {
+/* line 66, ../sass/header.scss */
+.header-menu {
   display: block;
   float: right;
+  margin-right: 320px;
 }
-/* line 59, ../sass/header.scss */
-.menu li {
+/* line 70, ../sass/header.scss */
+.header-menu li {
   display: inline-block;
   cursor: pointer;
   margin-right: 15px;
 }
-/* line 63, ../sass/header.scss */
-.menu li a {
+/* line 74, ../sass/header.scss */
+.header-menu li a {
   padding: 22px 0;
   display: inline-block;
   letter-spacing: 1px;
 }
-/* line 67, ../sass/header.scss */
-.menu li a:hover, .menu li a:active {
+/* line 78, ../sass/header.scss */
+.header-menu li a:hover, .header-menu li a:active {
   padding: 19px 0;
   color: #666666;
   border-top: 3px solid #32B0EE;
 }
 
 @media (max-width: 980px) {
-  /* line 79, ../sass/header.scss */
-  .menu {
+  /* line 91, ../sass/header.scss */
+  .header-site {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    background-color: #0EB493;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+  /* line 100, ../sass/header.scss */
+  .header-site.slide-down {
+    background-color: #0EB493;
+    max-height: 100%;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+
+  /* line 110, ../sass/header.scss */
+  .header-menu {
+    float: none;
     visibility: hidden;
+    margin-right: none;
+  }
+  /* line 114, ../sass/header.scss */
+  .header-menu.slide-down {
+    z-index: 1900;
+    visibility: visible;
+    text-align: center;
+  }
+  /* line 118, ../sass/header.scss */
+  .header-menu.slide-down li {
+    display: block;
+  }
+  /* line 120, ../sass/header.scss */
+  .header-menu.slide-down li a {
+    font-size: 16px;
+    color: #666666;
+  }
+  /* line 123, ../sass/header.scss */
+  .header-menu.slide-down li a:hover, .header-menu.slide-down li a:active {
+    color: #fff;
+    border-top: none;
+    padding: 22px 0;
+  }
+
+  /* line 133, ../sass/header.scss */
+  .logo {
+    background-color: #0EB493;
+  }
+  /* line 136, ../sass/header.scss */
+  .logo a:after {
+    background-color: #fff;
   }
 }
 /* line 1, ../sass/hero.scss */
@@ -422,43 +494,46 @@ button {
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+  margin-bottom: 0;
 }
-/* line 79, ../sass/hero.scss */
+/* line 80, ../sass/hero.scss */
 .social a {
   font-size: 20px;
   color: #595959;
 }
-/* line 82, ../sass/hero.scss */
+/* line 83, ../sass/hero.scss */
 .social a:hover {
   color: #fff;
 }
 
 @media (max-width: 600px) {
-  /* line 89, ../sass/hero.scss */
+  /* line 90, ../sass/hero.scss */
   .hero-content {
-    padding: 20px 10px;
+    margin: 20px 10px;
   }
-  /* line 91, ../sass/hero.scss */
+  /* line 92, ../sass/hero.scss */
   .hero-content h1, .hero-content h2, .hero-content p {
     color: #595959;
   }
-  /* line 94, ../sass/hero.scss */
+  /* line 95, ../sass/hero.scss */
   .hero-content h1 {
     font-size: 35px;
   }
-  /* line 97, ../sass/hero.scss */
+  /* line 98, ../sass/hero.scss */
   .hero-content h2 {
     font-size: 25px;
   }
-  /* line 100, ../sass/hero.scss */
+  /* line 101, ../sass/hero.scss */
   .hero-content p {
     font-size: 16px;
   }
 
-  /* line 104, ../sass/hero.scss */
+  /* line 105, ../sass/hero.scss */
   .social {
     position: relative;
     text-align: center;
+    bottom: 0;
+    margin-bottom: 20px;
   }
 }
 /* line 1, ../sass/features.scss */
@@ -982,24 +1057,29 @@ html, body {
   height: 100%;
 }
 
-/* line 23, ../sass/styles.scss */
+/* line 22, ../sass/styles.scss */
+body {
+  position: relative;
+}
+
+/* line 26, ../sass/styles.scss */
 h1, h2, a {
   color: #0EB493;
   font-family: 'RobotoSlab-light', Arial, san-serif;
 }
 
-/* line 28, ../sass/styles.scss */
+/* line 31, ../sass/styles.scss */
 a, p {
   color: #fff;
   font-size: 13px;
 }
 
-/* line 33, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
 p {
   font-family: 'Raleway-Light';
 }
 
-/* line 38, ../sass/styles.scss */
+/* line 41, ../sass/styles.scss */
 div h2 {
   font-family: 'Raleway-Bold';
   text-align: center;
@@ -1007,7 +1087,7 @@ div h2 {
   font-size: 20px;
 }
 
-/* line 46, ../sass/styles.scss */
+/* line 49, ../sass/styles.scss */
 .center {
   position: absolute;
   top: 50%;
@@ -1015,19 +1095,19 @@ div h2 {
   transform: translateY(-50%) translateX(-50%);
 }
 
-/* line 53, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 .inner {
   max-width: 980px;
   margin: 0 auto;
 }
 
-/* line 58, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 .heart-icon {
   display: block;
   margin: 20px auto 30px;
   text-align: center;
 }
-/* line 62, ../sass/styles.scss */
+/* line 65, ../sass/styles.scss */
 .heart-icon i {
   font-size: 16px;
   font-family: 'RobotoSlab-Regular';
@@ -1036,7 +1116,7 @@ div h2 {
   font-weight: 600;
   margin: 0 0 20px;
 }
-/* line 70, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 .heart-icon span {
   margin-right: 20px;
   margin-left: 20px;
@@ -1047,7 +1127,7 @@ div h2 {
   background-color: #D3D3D3;
   display: inline-block;
 }
-/* line 80, ../sass/styles.scss */
+/* line 83, ../sass/styles.scss */
 .heart-icon p {
   display: block;
   color: #595959;
@@ -1061,7 +1141,7 @@ div h2 {
 }
 
 @media (max-width: 768px) {
-  /* line 96, ../sass/styles.scss */
+  /* line 99, ../sass/styles.scss */
   .heart-icon p {
     margin: 25px 10px;
   }

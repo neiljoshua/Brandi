@@ -1,23 +1,32 @@
+%green-background {
+	background-color: $green;  
+	a {
+		&:after {
+		background-color:$white;		
+		}
+	}	
+}
+
 .header-site {
 	width: 100%;
 	position: fixed;
 	top: 0;
-	left: 0;
-	bottom: 0;
-	background-color:rgba(16,22,54,0.2);
-	z-index: 100;
-	max-height: 55px;
+	left: 300px;
+	z-index: 1800;
+	max-height:55px;
 	clear:both;
-	overflow:hidden;
-	&.green-menu {
-	    background-color: $green;  
-	}
 }
 
 .logo {
+	position: fixed;
 	display: block;
-	float: left;
-	margin: 5px 0 0 20px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(16,22,54,0.2);
+	padding: 5px 0 0 20px;
+	max-height: 50px;
 	clear: both;
 	overflow: hidden;
 	color: $white;
@@ -27,6 +36,8 @@
 		float: left;
 	}
 	a {
+		position: relative;
+		z-index: 2000;
 		&:after {
 		content: "";
 	    height: 19px;
@@ -38,24 +49,24 @@
 	    margin-right: 15px;
 	    margin-top: 10px;
 		}
+		&:hover {
+			cursor: pointer
+		}
 	}
  	p {
 		padding-top: 16px;
 		font-size: 14px;
 		color: $gray;
 	}
-	&.green {
-		a {
-			&:after {
-			background-color:$white;		
-			}
-		}	
+	&.green-menu {
+		@extend %green-background;
 	}
 }
 
-.menu {
+.header-menu {
 	display: block;
 	float: right;
+	margin-right: 320px;
 	li {
 		display: inline-block;
 		cursor: pointer;
@@ -76,8 +87,56 @@
 
 
 @include media(large) {
-	.menu {
+
+	.header-site {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 0;	
+		background-color: $green;
+		@include prefix(transition, all 0.6s ease, webkit ms o);
+		&.slide-down {
+			background-color: $green;
+			max-height: 100%;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+			@include prefix(transition, all 0.6s ease, webkit ms o);
+		}
+	}
+
+	.header-menu {
+		float: none;
 		visibility: hidden;
+		margin-right: none;
+		&.slide-down {
+			z-index: 1900;
+			visibility: visible;
+			text-align: center;
+			li {
+				display: block;
+				a{
+					font-size: 16px;
+					color: $mediumgray;
+					&:hover, &:active {
+						color: $white;
+						border-top: none;
+						padding: 22px 0
+					}
+				}
+			}
+		}
+	}
+
+	.logo {
+		background-color: $green;  
+		a {
+			&:after {
+			background-color:$white;		
+			}
+		}	
 	}
 
 }

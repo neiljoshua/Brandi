@@ -19,6 +19,9 @@ html, body {
 	height: 100%;
 }
 
+body {
+	position: relative;
+}
 
 h1, h2, a {
 	color: $green;
