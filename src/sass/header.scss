@@ -63,7 +63,7 @@
 	}
 }
 
-.header-menu {
+#header-menu {
 	display: block;
 	float: right;
 	margin-right: 320px;
@@ -75,7 +75,7 @@
 			padding: 22px 0; 
 			display: inline-block;
 			letter-spacing: 1px;
-			&:hover, &:active {
+			&:hover, &:active, &.active {
 				padding:19px 0;
 				color: $mediumgray;
 				border-top: 3px solid #32B0EE;
@@ -107,7 +107,7 @@
 		}
 	}
 
-	.header-menu {
+	#header-menu {
 		float: none;
 		visibility: hidden;
 		margin-right: none;
@@ -120,7 +120,7 @@
 				a{
 					font-size: 16px;
 					color: $mediumgray;
-					&:hover, &:active {
+					&:hover, &:active, &.active {
 						color: $white;
 						border-top: none;
 						padding: 22px 0

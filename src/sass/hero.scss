@@ -19,11 +19,11 @@
 		text-align: center;
 	}
 	h1 {
-		font-size: 45px;
+		font-size: 42px;
 	}
 	h2{
-		padding: 20px 0;
-		font-size: 25px;
+		padding: 18px 0;
+		font-size: 22px;
 	}
 	span {
 		font-weight: 700;
@@ -88,18 +88,19 @@
 
 @include media(mobile) {
 	.hero-content {
-		margin: 20px 10px;
+		margin: 35px auto;
 		h1,h2,p {
 			color: $gray;
 		}
 		h1 {
-			font-size: 35px;
-		}
-		h2{
 			font-size: 25px;
 		}
+		h2{
+			font-size: 20px;
+		}
 		p {
-			font-size: 16px;
+			font-size: 10px;
+			letter-spacing: 1.5px;
 		}
 	}
 	.social {
