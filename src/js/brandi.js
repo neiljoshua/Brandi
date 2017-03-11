@@ -6,7 +6,7 @@ $(document).ready(function() {
   var $menu = $('#header-menu');
   var $body =$('body');
   var $mobile =$('.c-hamburger');
-  var activeLink;
+  var activeLink = "";
 
   // Toggles mobile menu:
   function toggleMobileMenu(menu) {
@@ -42,7 +42,7 @@ $(document).ready(function() {
   windowScroll();
 
    function checkWidth(){
-    
+    var $activeLink = activeLink;
     if ($window.width() < 600) {
         $hero.removeClass('center');
     } else {
@@ -54,8 +54,6 @@ $(document).ready(function() {
         toggleMobileMenu($mobile);
       } 
     } 
-    $('#header-menu ul li a').removeClass("active");
-    currentLink.addClass("active");
   
   };
 
