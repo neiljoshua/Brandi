@@ -347,8 +347,6 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     height: 0;
     background-color: #0EB493;
     -webkit-transition: all 0.6s ease;
@@ -360,8 +358,6 @@ button {
   .header-site.slide-down {
     background-color: #0EB493;
     max-height: 100%;
-    top: 0;
-    bottom: 0;
     height: 100%;
     -webkit-transition: all 0.6s ease;
     -ms-transition: all 0.6s ease;
@@ -369,39 +365,39 @@ button {
     transition: all 0.6s ease;
   }
 
-  /* line 110, ../sass/header.scss */
+  /* line 108, ../sass/header.scss */
   #header-menu {
     float: none;
     visibility: hidden;
     margin-right: none;
   }
-  /* line 114, ../sass/header.scss */
+  /* line 112, ../sass/header.scss */
   #header-menu.slide-down {
     z-index: 1900;
     visibility: visible;
     text-align: center;
   }
-  /* line 118, ../sass/header.scss */
+  /* line 116, ../sass/header.scss */
   #header-menu.slide-down li {
     display: block;
   }
-  /* line 120, ../sass/header.scss */
+  /* line 118, ../sass/header.scss */
   #header-menu.slide-down li a {
     font-size: 16px;
     color: #666666;
   }
-  /* line 123, ../sass/header.scss */
+  /* line 121, ../sass/header.scss */
   #header-menu.slide-down li a:hover, #header-menu.slide-down li a:active, #header-menu.slide-down li a.active {
     color: #fff;
     border-top: none;
     padding: 22px 0;
   }
 
-  /* line 133, ../sass/header.scss */
+  /* line 131, ../sass/header.scss */
   .logo {
     background-color: #0EB493;
   }
-  /* line 136, ../sass/header.scss */
+  /* line 134, ../sass/header.scss */
   .logo a:after {
     background-color: #fff;
   }

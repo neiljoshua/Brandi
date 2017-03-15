@@ -6,7 +6,7 @@ $(document).ready(function() {
   var $menu = $('#header-menu');
   var $body =$('body');
   var $mobile =$('.c-hamburger');
-  var activeLink = "";
+
 
   // Toggles mobile menu:
   function toggleMobileMenu(menu) {
@@ -15,34 +15,31 @@ $(document).ready(function() {
     $(menu).toggleClass('is-active');
     $('.header-site').toggleClass('slide-down');
   }
-
+  
   //toggles slide-down green screen menu
 
   $('.c-hamburger').on('click', function(e){
       e.preventDefault();
-        var currentLink = activeLink; 
-        //Toggles mobile menu
-        toggleMobileMenu(this);
-        $('#header-menu ul li a').removeClass("active");
-        currentLink.addClass("active");
+        var menu = $(this);
+        toggleMobileMenu(menu);
+        currLink.addClass('active');
     });
 
 
   function windowScroll(){
     $(window).scroll (function () {
-          var sT = $(this).scrollTop();
-              if (sT >= 200) {
-                  $('.logo').addClass('green-menu');
-              }else {
-                  $('.logo').removeClass('green-menu');
-              }
+      var sT = $(this).scrollTop();
+        if (sT >= 200) {
+            $('.logo').addClass('green-menu');
+        }else {
+            $('.logo').removeClass('green-menu');
+        }
     })
   }
 
   windowScroll();
 
    function checkWidth(){
-    var $activeLink = activeLink;
     if ($window.width() < 600) {
         $hero.removeClass('center');
     } else {
@@ -175,39 +172,33 @@ window.validateEmail = function( emails ) {
     $('.success').hide();
   })
 
-
-// $('.menu a').on('click', function(){
-//   $('.menu').removeClass('visible');
-// });
-
 $(document).on("scroll", onScroll);
     
-  //smoothscroll
-  $('a[href^="#"]').on('click', function (e) {
-    e.preventDefault();
-    $(document).off("scroll");
-    
-    $('a').each(function () {
-        $(this).removeClass('active');
-    })
-    $(this).addClass('active');
+//smoothscroll
+$('a[href^="#"]').on('click', function (e) {
+  e.preventDefault();
+  $(document).off("scroll");
   
-    var target = this.hash,
-        menu = target;
-    $target = $(target);
-    $('html, body').stop().animate({
-        'scrollTop': $target.offset().top+2
-    }, 700, 'swing', function () {
-        window.location.hash = target;
-        $(document).on("scroll", onScroll);
-        if($mobile.hasClass('is-active')){
-          toggleMobileMenu($mobile);
-        }
-    });
+  $('a').each(function () {
+      $(this).removeClass('active');
+  })
+  $(this).addClass('active');
+
+  var target = this.hash,
+      menu = target;
+  $target = $(target);
+  $('html, body').stop().animate({
+      'scrollTop': $target.offset().top+2
+  }, 700, 'swing', function () {
+      window.location.hash = target;
+      $(document).on("scroll", onScroll);
+      if($mobile.hasClass('is-active')){
+        toggleMobileMenu($mobile);
+      }
+  });
 });
 
-
-}); // End of doc ready.  
+}); // End of doc ready. 
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
@@ -217,7 +208,6 @@ function onScroll(event){
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
             $('#header-menu ul li a').removeClass("active");
             currLink.addClass("active");
-            activeLink = currLink;
         }
         else{
             currLink.removeClass("active");

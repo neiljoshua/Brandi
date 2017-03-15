@@ -2,3 +2,10 @@
 
 # Node Package Manager
 node_modules
+
+#Sass files
+.sass-cache
+
+#Git flow
+gitflow-installer.sh
+gitflow/ 
