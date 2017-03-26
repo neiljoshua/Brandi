@@ -25,15 +25,54 @@ $(document).ready(function() {
         currLink.addClass('active');
     });
 
+  // Counter in Fun facts
+  function counterUp(){
+    $('.counter').each(function() {
+      var $this = $(this);
+      var countTo = $this.attr('data-count');
+
+      $({ countNum: $this.text()}).animate({
+
+        countNum: countTo
+      },
+
+      {
+
+        duration: 2000,
+        easing:'linear',
+        step: function() {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function() {
+          $this.text(this.countNum);
+          //alert('finished');
+        }
+
+      });  
+    });
+  }
 
   function windowScroll(){
     $(window).scroll (function () {
-      var sT = $(this).scrollTop();
-        if (sT >= 200) {
-            $('.logo').addClass('green-menu');
-        }else {
-            $('.logo').removeClass('green-menu');
-        }
+      var docViewTop = $(this).scrollTop();
+      var docViewBottom =docViewTop + $(this).height();
+      var elemTop = $('.fun-facts').offset().top;
+      var elemBott = elemTop + $('.fun-facts').height();
+   
+      console.log('position',docViewTop);
+      console.log('position view bottom',docViewBottom);
+      console.log('top of fun facts',elemTop);
+      console.log('bottom of fun facts',elemBott);
+
+      if (docViewTop >= 200) {
+          $('.logo').addClass('green-menu');
+      }else {
+          $('.logo').removeClass('green-menu');
+      }
+      if ((docViewBottom >= elemTop) && (elemBott >= docViewTop) ){
+        counterUp();
+        console.log('in View!!');
+      }
     })
   }
 
@@ -53,6 +92,8 @@ $(document).ready(function() {
     } 
   
   };
+
+  
 
   checkWidth();
 
