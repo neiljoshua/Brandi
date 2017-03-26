@@ -52,6 +52,14 @@ $(document).ready(function() {
     });
   }
 
+  function cleanCounter(){
+    $('.counter').each(function() {
+      var $this = $(this);
+      $this.text('0');
+    });
+
+  }
+
   function windowScroll(){
     $(window).scroll (function () {
       var docViewTop = $(this).scrollTop();
@@ -64,10 +72,13 @@ $(document).ready(function() {
       }else {
           $('.logo').removeClass('green-menu');
       }
-      // if fun facts in view run counter 
+      // if fun facts in view run counter. Otherwise zero out counter
       if ((docViewBottom >= elemTop) && (elemBott >= docViewTop) ){
         counterUp();
+      } else {
+          cleanCounter();
       }
+
     })
   }
 
