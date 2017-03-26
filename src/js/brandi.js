@@ -58,20 +58,15 @@ $(document).ready(function() {
       var docViewBottom =docViewTop + $(this).height();
       var elemTop = $('.fun-facts').offset().top;
       var elemBott = elemTop + $('.fun-facts').height();
-   
-      console.log('position',docViewTop);
-      console.log('position view bottom',docViewBottom);
-      console.log('top of fun facts',elemTop);
-      console.log('bottom of fun facts',elemBott);
 
       if (docViewTop >= 200) {
           $('.logo').addClass('green-menu');
       }else {
           $('.logo').removeClass('green-menu');
       }
+      // if fun facts in view run counter 
       if ((docViewBottom >= elemTop) && (elemBott >= docViewTop) ){
         counterUp();
-        console.log('in View!!');
       }
     })
   }
