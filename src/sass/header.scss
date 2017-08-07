@@ -1,10 +1,10 @@
 %green-background {
-	background-color: $green;  
+	background-color: $green;
 	a {
 		&:after {
-		background-color:$white;		
+		background-color:$white;
 		}
-	}	
+	}
 }
 
 .header-site {
@@ -72,9 +72,16 @@
 		cursor: pointer;
 		margin-right: 15px;
 		a {
-			padding: 22px 0; 
+			padding: 22px 0;
 			display: inline-block;
 			letter-spacing: 1px;
+			font-size: 30px;
+			@include media-min-width(mobile) {
+				font-size: 40px;
+			}
+			@include media-min-width(tablet) {
+				font-size: 16px;
+			}
 			&:hover, &:active, &.active {
 				padding:19px 0;
 				color: $mediumgray;
@@ -92,9 +99,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		// right: 0;
-		// bottom: 0;
-		height: 0;	
+		height: 0;
 		background-color: $green;
 		@include prefix(transition, all 0.6s ease, webkit ms o);
 		&.slide-down {
@@ -116,7 +121,6 @@
 			li {
 				display: block;
 				a{
-					font-size: 16px;
 					color: $mediumgray;
 					&:hover, &:active, &.active {
 						color: $white;
@@ -129,12 +133,12 @@
 	}
 
 	.logo {
-		background-color: $green;  
+		background-color: $green;
 		a {
 			&:after {
-			background-color:$white;		
+			background-color:$white;
 			}
-		}	
+		}
 	}
 
 }
