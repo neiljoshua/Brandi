@@ -9,7 +9,7 @@ footer {
 		margin-top: 10px;
 		margin-bottom: 30px;
 	}
-	h3{
+	h3 {
 		font-size: 20px;
 		margin: 20px 0 25px;
 		text-align: left;
@@ -18,7 +18,7 @@ footer {
 		line-height: 2;
 		max-width: 220px;
 	}
-	button{
+	button {
 		position: relative;
 		margin: 10px auto;
 		padding: 10px 2px;
@@ -27,11 +27,11 @@ footer {
 		border-radius: 5px;
 		width: 90%;
 	}
-	input{
+	input {
 		width: 85%;
 		color: $white;
 	}
-	.icon-right{
+	.icon-right {
 		width: 8%;
 		color: $white;
 	}
@@ -57,17 +57,16 @@ footer {
 			color: $grayfooter;
 		}
 	}
-	
+
 }
 
 @include media(tablet) {
 	.col-footer {
 		padding-left:0;
-	}	
+	}
 }
 
-@include media(mobile){
-
+@include media(mobile) {
 
 	.col-footer {
 		width: 100%;
@@ -76,11 +75,11 @@ footer {
 		}
 	}
 	footer {
-		h3,h4, p {
+		h3, h4, p {
 			max-width: 100%;
 			text-align: center;
 		}
-		h3{
+		h3 {
 			margin-top: 30px;
 		}
 		img {

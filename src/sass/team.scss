@@ -1,10 +1,9 @@
-
 #teamSlider {
 	max-width: 980px;
 	margin: 30px auto;
 	padding: 30px 0;
 	text-align: center;
-	.item{
+	.item {
 		max-width: 90%;
 		margin: 0 auto;
 		overflow: hidden;
@@ -13,7 +12,7 @@
 			margin: 0 auto;
 		}
 	}
-	
+
 	h3 {
 		color: $gray;
 		margin: 20px 0 10px;
