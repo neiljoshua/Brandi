@@ -1028,8 +1028,8 @@ button {
 /* line 1, ../sass/map.scss */
 .map1 {
   background: #191919 url("/src/images/map.jpg");
-  min-height: 200px;
-  max-height: 200px;
+  min-height: 250px;
+  max-height: 250px;
   border-top: 1px #000 solid;
   border-bottom: 4px #000 solid;
 }
