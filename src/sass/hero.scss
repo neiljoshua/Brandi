@@ -16,7 +16,7 @@
 }
 
 .hero-content {
-	h1,h2,p {
+	h1, h2, p {
 		color: $white;
 		font-family: 'RobotoSlab-Thin';
 		font-weight: 100;
@@ -25,7 +25,7 @@
 	h1 {
 		font-size: 42px;
 	}
-	h2{
+	h2 {
 		padding: 18px 0;
 		font-size: 22px;
 	}
@@ -34,7 +34,7 @@
 	}
 	p {
 		margin-bottom: 20px;
-		&:before, &:after{
+		&:before, &:after {
 		content: "";
 		height: 2px;
 		width: 25px;
@@ -60,9 +60,9 @@
 }
 
 
-#home-slider{
+#home-slider {
 	width: 100%;
-	.item{
+	.item {
 		img {
 	    display: block;
 	    width: 100%;
@@ -84,7 +84,7 @@
   a {
   	font-size: 20px;
   	color: $gray;
-  	&:hover{
+  	&:hover {
   		color: $white;
   	}
   }
@@ -93,13 +93,13 @@
 @include media(mobile) {
 	.hero-content {
 		margin: 35px auto;
-		h1,h2,p {
+		h1, h2, p {
 			color: $gray;
 		}
 		h1 {
 			font-size: 25px;
 		}
-		h2{
+		h2 {
 			font-size: 20px;
 		}
 		p {

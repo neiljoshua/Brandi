@@ -239,7 +239,7 @@ button {
   src: url("/src/font/Raleway/Raleway-Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
 }
-/* ORaleway  Bold */
+/* Raleway  Bold */
 @font-face {
   font-family: 'Raleway-Bold';
   font-style: normal;
@@ -606,25 +606,25 @@ button {
   line-height: 1.5;
 }
 
-/* line 2, ../sass/works.scss */
+/* line 1, ../sass/works.scss */
 .works {
   display: block;
   max-width: 100%;
   overflow: hidden;
 }
 
-/* line 9, ../sass/works.scss */
+/* line 8, ../sass/works.scss */
 .nav {
   max-width: 720px;
   margin: 30px auto;
   text-align: center;
 }
-/* line 13, ../sass/works.scss */
+/* line 12, ../sass/works.scss */
 .nav li {
   display: inline-block;
   margin: 8px 5px;
 }
-/* line 16, ../sass/works.scss */
+/* line 15, ../sass/works.scss */
 .nav li a {
   text-decoration: none;
   padding: 5px 10px;
@@ -638,7 +638,7 @@ button {
   transition: background-color 0.7s ease;
   background-color: #fff;
 }
-/* line 27, ../sass/works.scss */
+/* line 26, ../sass/works.scss */
 .nav li a:hover, .nav li a:active {
   background-color: #0FCF8C;
   color: #fff;
@@ -646,7 +646,7 @@ button {
   opacity: 1;
 }
 
-/* line 39, ../sass/works.scss */
+/* line 38, ../sass/works.scss */
 .details {
   position: absolute;
   width: 100%;
@@ -664,7 +664,7 @@ button {
   height: auto;
   text-align: center;
 }
-/* line 54, ../sass/works.scss */
+/* line 53, ../sass/works.scss */
 .details i {
   display: block;
   margin: 0 auto;
@@ -679,18 +679,18 @@ button {
   margin-top: 18%;
   margin-bottom: 8%;
 }
-/* line 68, ../sass/works.scss */
+/* line 67, ../sass/works.scss */
 .details h3 {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-/* line 73, ../sass/works.scss */
+/* line 72, ../sass/works.scss */
 .details p {
   font-size: 12px;
 }
 
-/* line 78, ../sass/works.scss */
+/* line 77, ../sass/works.scss */
 .brand-box {
   position: relative;
   float: left;
@@ -699,13 +699,13 @@ button {
   min-height: -moz-calc(width/1.6);
   min-height: calc(width/1.6);
 }
-/* line 83, ../sass/works.scss */
+/* line 82, ../sass/works.scss */
 .brand-box img {
   display: block;
   width: 100%;
   height: auto;
 }
-/* line 89, ../sass/works.scss */
+/* line 88, ../sass/works.scss */
 .brand-box:hover .details {
   cursor: pointer;
   visibility: visible;
@@ -714,7 +714,7 @@ button {
   transition: all 0.8s ease;
 }
 
-/* line 99, ../sass/works.scss */
+/* line 98, ../sass/works.scss */
 .inactive-img {
   visibility: hidden;
   opacity: 0;
@@ -722,7 +722,7 @@ button {
   height: 0;
 }
 
-/* line 106, ../sass/works.scss */
+/* line 105, ../sass/works.scss */
 .active-img {
   visibility: visible;
   opacity: 0.8;
@@ -731,25 +731,25 @@ button {
   opacity: 1;
 }
 
-/* line 2, ../sass/team.scss */
+/* line 1, ../sass/team.scss */
 #teamSlider {
   max-width: 980px;
   margin: 30px auto;
   padding: 30px 0;
   text-align: center;
 }
-/* line 7, ../sass/team.scss */
+/* line 6, ../sass/team.scss */
 #teamSlider .item {
   max-width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
-/* line 11, ../sass/team.scss */
+/* line 10, ../sass/team.scss */
 #teamSlider .item img {
   width: 90%;
   margin: 0 auto;
 }
-/* line 17, ../sass/team.scss */
+/* line 16, ../sass/team.scss */
 #teamSlider h3 {
   color: #595959;
   margin: 20px 0 10px;
@@ -757,7 +757,7 @@ button {
   font-weight: 400;
   letter-spacing: 2px;
 }
-/* line 24, ../sass/team.scss */
+/* line 23, ../sass/team.scss */
 #teamSlider p {
   color: #666666;
   font-size: 12px;
@@ -1112,31 +1112,31 @@ footer .icon-heart-empty, footer span {
   }
 }
 @media (max-width: 600px) {
-  /* line 72, ../sass/footer.scss */
+  /* line 71, ../sass/footer.scss */
   .col-footer {
     width: 100%;
   }
-  /* line 74, ../sass/footer.scss */
+  /* line 73, ../sass/footer.scss */
   .col-footer.last {
     width: 100%;
   }
 
-  /* line 79, ../sass/footer.scss */
+  /* line 78, ../sass/footer.scss */
   footer h3, footer h4, footer p {
     max-width: 100%;
     text-align: center;
   }
-  /* line 83, ../sass/footer.scss */
+  /* line 82, ../sass/footer.scss */
   footer h3 {
     margin-top: 30px;
   }
-  /* line 86, ../sass/footer.scss */
+  /* line 85, ../sass/footer.scss */
   footer img {
     display: block;
     width: 20%;
     margin: 10px auto 30px;
   }
-  /* line 91, ../sass/footer.scss */
+  /* line 90, ../sass/footer.scss */
   footer button {
     display: block;
     width: 80%;
