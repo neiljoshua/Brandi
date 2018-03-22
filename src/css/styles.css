@@ -444,7 +444,7 @@ button {
 }
 /* line 25, ../sass/hero.scss */
 .hero-content h1 {
-  font-size: 42px;
+  font-size: 45px;
 }
 /* line 28, ../sass/hero.scss */
 .hero-content h2 {
@@ -625,31 +625,32 @@ button {
   margin: 8px 5px;
 }
 /* line 15, ../sass/works.scss */
-.nav li a {
+.nav li .filter-link {
   text-decoration: none;
   padding: 5px 10px;
   font-size: 14px;
-  font-weight: 600;
   color: #666666;
   border-radius: 6px;
   opacity: 1;
-  -webkit-transition: background-color 0.7s ease;
-  /* Safari 3.1 to 6.0 */
-  transition: background-color 0.7s ease;
   background-color: #fff;
+  -webkit-transition: background-color 0.6s;
+  -ms-transition: background-color 0.6s;
+  transition: background-color 0.6s;
 }
-/* line 26, ../sass/works.scss */
-.nav li a:hover, .nav li a:active {
+/* line 24, ../sass/works.scss */
+.nav li .filter-link:hover, .nav li .filter-link.active {
   background-color: #0FCF8C;
   color: #fff;
-  border-radius: 6px;
   opacity: 1;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.6s;
+  -ms-transition: background-color 0.6s;
+  transition: background-color 0.6s;
 }
 
 /* line 38, ../sass/works.scss */
 .details {
   position: absolute;
-  width: 100%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -658,17 +659,15 @@ button {
   opacity: 0;
   background-color: #0EB493;
   color: #fff;
-  -webkit-transition: all 0.8s ease;
-  /* Safari 3.1 to 6.0 */
-  transition: all 0.8s ease;
-  height: auto;
+  -webkit-transition: all 0.6s ease 0.4s;
+  -ms-transition: all 0.6s ease 0.4s;
+  transition: all 0.6s ease 0.4s;
   text-align: center;
 }
-/* line 53, ../sass/works.scss */
+/* line 50, ../sass/works.scss */
 .details i {
   display: block;
   margin: 0 auto;
-  color: #fff;
   font-size: 25px;
   text-align: center;
   width: 40px;
@@ -679,42 +678,39 @@ button {
   margin-top: 18%;
   margin-bottom: 8%;
 }
-/* line 67, ../sass/works.scss */
+/* line 63, ../sass/works.scss */
 .details h3 {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-/* line 72, ../sass/works.scss */
+/* line 68, ../sass/works.scss */
 .details p {
   font-size: 12px;
 }
 
-/* line 77, ../sass/works.scss */
+/* line 73, ../sass/works.scss */
 .brand-box {
   position: relative;
   float: left;
   width: 25%;
-  min-height: -webkit-calc(width/1.6);
-  min-height: -moz-calc(width/1.6);
-  min-height: calc(width/1.6);
 }
-/* line 82, ../sass/works.scss */
+/* line 77, ../sass/works.scss */
 .brand-box img {
   display: block;
   width: 100%;
-  height: auto;
 }
-/* line 88, ../sass/works.scss */
+/* line 82, ../sass/works.scss */
 .brand-box:hover .details {
   cursor: pointer;
   visibility: visible;
   opacity: 0.8;
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 0.6s ease 0.2s;
+  -ms-transition: all 0.6s ease 0.2s;
+  transition: all 0.6s ease 0.2s;
 }
 
-/* line 98, ../sass/works.scss */
+/* line 91, ../sass/works.scss */
 .inactive-img {
   visibility: hidden;
   opacity: 0;
@@ -722,12 +718,9 @@ button {
   height: 0;
 }
 
-/* line 105, ../sass/works.scss */
+/* line 98, ../sass/works.scss */
 .active-img {
   visibility: visible;
-  opacity: 0.8;
-  -webkit-transition: opacity 0.9s ease;
-  transition: opacity 0.9s ease;
   opacity: 1;
 }
 
@@ -740,16 +733,15 @@ button {
 }
 /* line 6, ../sass/team.scss */
 #teamSlider .item {
-  max-width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
-/* line 10, ../sass/team.scss */
+/* line 9, ../sass/team.scss */
 #teamSlider .item img {
   width: 90%;
   margin: 0 auto;
 }
-/* line 16, ../sass/team.scss */
+/* line 15, ../sass/team.scss */
 #teamSlider h3 {
   color: #595959;
   margin: 20px 0 10px;
@@ -757,7 +749,7 @@ button {
   font-weight: 400;
   letter-spacing: 2px;
 }
-/* line 23, ../sass/team.scss */
+/* line 22, ../sass/team.scss */
 #teamSlider p {
   color: #666666;
   font-size: 12px;
