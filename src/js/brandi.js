@@ -109,9 +109,11 @@ $(document).ready(function() {
 
    $('.filter-link').on('click', function(e){
     e.preventDefault();
+    var activeLink = $(this);
+    console.log(this);
     var linkHref = $(this).attr('href');
     $('.filter-link').removeClass('active');
-    $(this).addClass('active');
+    $(activeLink).addClass('active');
 
     // Filter images
     var activeImg = $('.works').find("[data-type='" + linkHref + "']");
