@@ -2,38 +2,35 @@
 	display: block;
 	max-width:100%;
 	overflow: hidden;
-
 }
 
-.nav {
+.works__nav {
+	display: block;
 	max-width: 720px;
 	margin: 30px auto;
 	text-align: center;
-	li {
+	.filter-link {
 		display: inline-block;
-		margin: 8px 5px;
-		.filter-link {
-			text-decoration: none;
-			padding:5px 10px;
-			font-size: 14px;
-			color: $mediumgray;
-			border-radius: 6px;
-			opacity: 1;
-			background-color: $white;
+		padding: 5px;
+		text-decoration: none;
+		font-family: $serif-light;
+		font-size: 14px;
+		color: $mediumgray;
+		background-color: $white;
+		@include prefix(border-radius, 4px, webkit ms);
+		@include prefix(transition, background-color 0.6s, webkit ms);
+		&:hover,
+		&.active {
+			background-color: $lightgreen;
+			color: $white;
 			@include prefix(transition, background-color 0.6s, webkit ms);
-			&:hover,
-			&.active {
-				background-color: $lightgreen;
-				color: $white;
-				opacity: 1;
-				border-radius: 6px;
-				@include prefix(transition, background-color 0.6s, webkit ms);
-			}
+		}
+		@include media-min-width(tablet) {
+			padding: 5px 10px;
+			font-size: 16px;
 		}
 	}
 }
-
-
 
 .details {
 	position: absolute;

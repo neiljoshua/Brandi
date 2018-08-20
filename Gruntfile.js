@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-  
+
 // Project configuration.
 grunt.initConfig({
 
@@ -17,15 +17,15 @@ grunt.initConfig({
 		dist:{
 			src: ['src/css/vendors/responsive.css', 'src/css/vendors/fontello.css',
 	      		'src/css/vendors/owl.carousel.css', 'src/css/vendors/owl.theme.css'],
-	      	dest: 'vendors.css',	
-	    }  	
+	      	dest: 'vendors.css',
+	    }
 	},
 
 	uglify: {
 	  	my_target: {
     	  files: {
      	 	  'brandi.min.js': ['src/js/brandi.js'],
-      		  'plugins.min.js': ['src/js/plugins/*.min.js']
+      		'plugins.min.js': ['src/js/plugins/*.min.js']
      		}
   		}
 	},
@@ -34,9 +34,12 @@ grunt.initConfig({
     css: {
       files: ['src/sass/*.scss'],
       tasks: ['compass']
+    },
+    js: {
+    	files: ['src/js/*.js'],
+    	tasks: ['uglify']
     }
   }
-
 
 });
 
@@ -51,4 +54,4 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.registerTask('default', ['concat', 'uglify', 'watch']);
 grunt.registerTask('dev', ['compass']);
 }
- 
+
