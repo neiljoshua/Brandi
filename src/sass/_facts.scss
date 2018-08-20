@@ -1,9 +1,10 @@
 .fun-facts{
 	background: url('/src/images/city.jpg');
-	color: $white;	
+	color: $white;
 	margin: 0 auto;
   clear: both;
 	overflow: hidden;
+	margin-bottom: 50px;
 
 	.col {
 	 	width: 25%;
@@ -34,5 +35,4 @@
 			font-family: 'RobotoSlab-thin';
 		}
 	}
-
 }
