@@ -1,4 +1,4 @@
-.fun-facts{
+.fun-facts {
 	background: url('/src/images/city.jpg');
 	color: $white;
 	margin: 0 auto;
@@ -7,10 +7,16 @@
 	margin-bottom: 50px;
 
 	.col {
-	 	width: 25%;
-	 	float: left;
+	 	width: 100%;
   	text-align: center;
   	padding: 35px 0;
+  	@include media-min-width(mobile) {
+  		width: 25%;
+	 		float: left;
+  	}
+  	@include media-min-width(tablet) {
+  		width: 50%;
+  	}
   	i{
 			display: block;
 			margin: 0 auto;
