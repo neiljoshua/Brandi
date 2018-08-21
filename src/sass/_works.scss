@@ -1,7 +1,30 @@
-.works{
+.works {
 	display: block;
 	max-width:100%;
 	overflow: hidden;
+	.brand-box {
+		position: relative;
+		width: 100%;
+		@include media-min-width(mobile) {
+			width: 50%;
+			float: left;
+		}
+		@include media-min-width(tablet) {
+			width: 25%;
+		}
+		img {
+			display: block;
+			width: 100%;
+		}
+		&:hover {
+			.details {
+				cursor: pointer;
+				visibility: visible;
+				opacity: 0.8;
+				@include prefix(transition, all .6s ease .2s, webkit ms);
+			}
+		}
+	}
 }
 
 .works__nav {
@@ -67,23 +90,7 @@
 	}
 }
 
-.brand-box {
-	position: relative;
-	float: left;
-	width: 25%;
-	img {
-		display: block;
-		width: 100%;
-	}
-	&:hover {
-		.details {
-			cursor: pointer;
-			visibility: visible;
-			opacity: 0.8;
-			@include prefix(transition, all .6s ease .2s, webkit ms);
-		}
-	}
-}
+
 
 .inactive-img {
 	visibility: hidden;
