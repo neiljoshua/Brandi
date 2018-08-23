@@ -1223,28 +1223,27 @@ footer .icon-heart-empty, footer span {
   margin: 0 auto;
   clear: both;
   overflow: hidden;
-  margin-bottom: 50px;
 }
-/* line 9, ../sass/_facts.scss */
+/* line 8, ../sass/_facts.scss */
 .fun-facts .col {
   width: 100%;
   text-align: center;
   padding: 35px 0;
 }
 @media (min-width: 601px) {
-  /* line 9, ../sass/_facts.scss */
+  /* line 8, ../sass/_facts.scss */
   .fun-facts .col {
     width: 50%;
     float: left;
   }
 }
 @media (min-width: 769px) {
-  /* line 9, ../sass/_facts.scss */
+  /* line 8, ../sass/_facts.scss */
   .fun-facts .col {
     width: 25%;
   }
 }
-/* line 20, ../sass/_facts.scss */
+/* line 19, ../sass/_facts.scss */
 .fun-facts .col i {
   display: block;
   margin: 0 auto;
@@ -1256,16 +1255,16 @@ footer .icon-heart-empty, footer span {
   border: 1px white solid;
   border-radius: 50%;
 }
-/* line 31, ../sass/_facts.scss */
+/* line 30, ../sass/_facts.scss */
 .fun-facts .col h3, .fun-facts .col p {
   margin: 30px 0;
 }
-/* line 34, ../sass/_facts.scss */
+/* line 33, ../sass/_facts.scss */
 .fun-facts .col h3 {
   font-size: 45px;
   font-family: 'PlayFair-thin';
 }
-/* line 38, ../sass/_facts.scss */
+/* line 37, ../sass/_facts.scss */
 .fun-facts .col p {
   font-weight: 100;
   letter-spacing: 1px;
