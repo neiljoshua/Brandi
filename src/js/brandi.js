@@ -20,6 +20,7 @@ $(document).ready(function() {
 
 
 
+
   $('.wrapper').addClass('loaded');
 
   $('.hamburger').on('click', function(e){
@@ -27,6 +28,8 @@ $(document).ready(function() {
     	$(this).toggleClass('is-active');
       $('.overlay').toggleClass('active-overlay');
   });
+
+
 
   // Counter in Fun facts
   function counterUp(){
@@ -62,12 +65,15 @@ $(document).ready(function() {
   }
 
   function counter(){
-    var docViewTop = $(document).scrollTop();
-    var docViewBottom =docViewTop + $(document).height();
-    var elemTop = $('.fun-facts').offset().top;
-    var elemBott = elemTop + $('.fun-facts').height();
 
-
+    var docViewTop = $(document).scrollTop(),
+	    	docViewBottom =docViewTop + $(document).height(),
+	    	elemTop = $('#team').offset().top,
+    		elemBott = elemTop + $('#team').height();
+    		// console.log('docViewTop',docViewTop);
+    		// console.log('docViewBottom',docViewBottom);
+    		// console.log('elemTop',elemTop);
+    		// console.log('elemBott',elemBott);
     // if fun facts in view run counter. Otherwise zero out counter
     if ((docViewBottom >= elemTop) && (elemBott >= docViewTop) ){
       counterUp();
@@ -76,7 +82,7 @@ $(document).ready(function() {
     }
   }
 
-  counter();
+  // counter();
 
  	function checkWidth(){
   	if ($window.width() < 600) {
@@ -223,26 +229,29 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$(window).scroll(function() {
+
+			var scrollDistance = $(window).scrollTop();
+
+		  function changeMenuColor() {
+				if (scrollDistance >= 200) {
+		        $('header').addClass('green-menu');
+		    }else {
+		        $('header').removeClass('green-menu');
+		    }
+			}
+			changeMenuColor();
+		  counter();
+
+			$('.page-section').each(function(i) {
+					if ( $(this).position().top <= scrollDistance+60 ) {
+						 $('.overlay-menu a.active').removeClass('active');
+						 $('.overlay-menu a').eq(i).addClass('active');
+					}
+			});
+
+	}).scroll();
+
+
 }); // End of doc ready.
-
-$(window).scroll(function() {
-
-		var scrollDistance = $(window).scrollTop();
-
-		$('.page-section').each(function(i) {
-				if ( $(this).position().top <= scrollDistance+60 ) {
-					 $('.overlay-menu a.active').removeClass('active');
-					 $('.overlay-menu a').eq(i).addClass('active');
-				}
-		});
-
-		if (scrollDistance >= 200) {
-        $('header').addClass('green-menu');
-    }else {
-        $('header').removeClass('green-menu');
-    }
-
-}).scroll();
-
-
 
