@@ -44,7 +44,7 @@ $(document).ready(function() {
 
       {
 
-        duration: 2000,
+        duration: 1500,
         easing:'linear',
         step: function() {
           $this.text(Math.floor(this.countNum));
@@ -70,10 +70,7 @@ $(document).ready(function() {
 	    	docViewBottom =docViewTop + $(document).height(),
 	    	elemTop = $('#team').offset().top,
     		elemBott = elemTop + $('#team').height();
-    		// console.log('docViewTop',docViewTop);
-    		// console.log('docViewBottom',docViewBottom);
-    		// console.log('elemTop',elemTop);
-    		// console.log('elemBott',elemBott);
+
     // if fun facts in view run counter. Otherwise zero out counter
     if ((docViewBottom >= elemTop) && (elemBott >= docViewTop) ){
       counterUp();
@@ -220,7 +217,6 @@ $(document).ready(function() {
 		$('html, body').stop().animate({
 	      'scrollTop': $(target).offset().top
 	  	}, 600, 'swing', function () {
-	  		window.location.hash = target;
 	      if( $('.hamburger').hasClass('is-active') ) {
 	        $('.hamburger').toggleClass('is-active');
 	        $('.overlay').toggleClass('active-overlay');
