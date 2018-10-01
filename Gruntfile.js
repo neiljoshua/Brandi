@@ -2,41 +2,41 @@ module.exports = function(grunt) {
 
 grunt.initConfig({
 
-	compass: {
-	    dist: {
-	      options: {
-	        sassDir: 'src/sass/',
-	        specify: 'src/sass/styles.scss',
-	        cssDir: 'src/css/'
-	      }
-	    }
-	  },
+  compass: {
+      dist: {
+        options: {
+          sassDir: 'src/sass/',
+          specify: 'src/sass/styles.scss',
+          cssDir: 'src/css/'
+        }
+      }
+    },
 
-	concat: {
-		dist:{
-			src: ['src/css/vendors/responsive.css', 'src/css/vendors/fontello.css',
-	      		'src/css/vendors/owl.carousel.css', 'src/css/vendors/owl.theme.css'],
-	      	dest: 'vendors.css',
-	    }
-	},
+  concat: {
+    dist:{
+      src: ['src/css/vendors/responsive.css', 'src/css/vendors/fontello.css',
+            'src/css/vendors/owl.carousel.css', 'src/css/vendors/owl.theme.css'],
+      dest: 'vendors.css',
+      }
+  },
 
-	uglify: {
-	  	my_target: {
-    	  files: {
-     	 	  'brandi.min.js': ['src/js/brandi.js'],
-      		'plugins.min.js': ['src/js/plugins/*.min.js']
-     		}
-  		}
-	},
+  uglify: {
+      my_target: {
+        files: {
+          'brandi.min.js': ['src/js/brandi.js'],
+          'plugins.min.js': ['src/js/plugins/*.min.js']
+        }
+      }
+  },
 
-	watch: {
+  watch: {
     css: {
       files: ['src/sass/*.scss'],
       tasks: ['compass']
     },
     js: {
-    	files: ['src/js/*.js'],
-    	tasks: ['uglify']
+      files: ['src/js/*.js'],
+      tasks: ['uglify']
     }
   }
 

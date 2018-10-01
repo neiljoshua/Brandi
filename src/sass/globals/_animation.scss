@@ -1,21 +1,21 @@
 @keyframes animateone{
-	0%{
-		top:40px;
-		@include prefix(transform, scale(1), webkit ms);
-	}
-	50%{
-		top:-40px;
-		@include prefix(transform, scale(0.5), webkit ms);
-	}
+  0%{
+    top:40px;
+    @include prefix(transform, scale(1), webkit ms);
+  }
+  50%{
+    top:-40px;
+    @include prefix(transform, scale(0.5), webkit ms);
+  }
 }
 
 @keyframes animatetwo{
-	0%,100%{
-		top:-40px;
-		@include prefix(transform, scale(0.5), webkit ms);
-	}
-	50%{
-		top:40px;
-		@include prefix(transform, scale(1), webkit ms);
-	}
+  0%,100%{
+    top:-40px;
+    @include prefix(transform, scale(0.5), webkit ms);
+  }
+  50%{
+    top:40px;
+    @include prefix(transform, scale(1), webkit ms);
+  }
 }
