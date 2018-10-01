@@ -48,15 +48,15 @@ $(document).ready(function() {
 		slideSpeed : 300,
 		paginationSpeed : 300,
 		singleItem:true,
-		autoPlay: true,
+		autoPlay: true
 	});
 
- $("#featuresSlider").owlCarousel({
+	$("#featuresSlider").owlCarousel({
 		autoPlay: 1500,
 		items : 3,
 		itemsDesktop : [1199,3],
 		itemsDesktopSmall : [979,2],
-		responsive: true,
+		responsive: true
 	});
 
 	$("#teamSlider").owlCarousel({
@@ -64,7 +64,7 @@ $(document).ready(function() {
 		items : 4,
 		itemsDesktop : [1199,4],
 		itemsDesktopSmall : [979,3],
-		responsive: true,
+		responsive: true
 	});
 
 	$('form').submit(function(e) {
@@ -80,20 +80,22 @@ $(document).ready(function() {
 
 		} else {
 
-		$email.parent().removeClass('invalid')
-		$(".error").fadeTo(400, 0);
-		 var url = "contact.php";
+			$email.parent().removeClass('invalid')
+			$(".error").fadeTo(400, 0);
+			var url = "contact.php";
+
 			$.ajax({
-				 type: "POST",
-				 url: url,
-				 data: $("#contact-form").serialize(),
-				 success: function(data)
-				 {
-					 $('.success').fadeTo(400, 1);
-					 $('form input').val('');
-				 }
-			 });
+				type: "POST",
+				url: url,
+				data: $("#contact-form").serialize(),
+				success: function(data)
+				{
+					$('.success').fadeTo(400, 1);
+					$('form input').val('');
+				}
+			});
 			return false;
+
 		}
 	});
 
@@ -121,7 +123,6 @@ $(document).ready(function() {
 		return false;
 	});
 
-	// Form Validation
 	window.validateEmail = function( emails ) {
 
 		var errors       = 0,
