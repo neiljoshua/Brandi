@@ -1,8 +1,8 @@
-<?php 
+<?php
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $recipient="neil@neiljoshua.com";
     $subject="Web dev inquiry";
-    $sender=$_POST["user_name"];             
+    $sender=$_POST["user_name"];
     $senderEmail=$_POST["user_email"];
     $message=$_POST["user_message"];
 

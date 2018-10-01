@@ -1,55 +1,55 @@
 .features {
-	background-color: $darksilver;
-	clear: both;
+  background-color: $darksilver;
+  clear: both;
 }
 
 #featuresSlider {
-	display: block;
-	margin: 0 20px;
-	padding: 30px 0;
-	@include calc(width, '100% - 40px');
-	@include media-min-width(mobile) {
-		margin: 0 30px;
-		@include calc(width, '100% - 60px');
-	}
-	@include media-min-width(large) {
-		max-width: 980px;
-		margin: 0 auto;
-	}
-	.col {
-		margin: 10px;
-		@include calc(width, '100%-20px');
-		i {
-			display: inline-block;
-			width: 35px;
-			height: 35px;
-			line-height: 35px;
-			text-align: center;
-			font-size: 20px;
-			color: $lightgreen;
-			border: 2px solid $lightgreen;
-			@include prefix(border-radius, 50%, webkit ms);
-		}
-		h3 {
-			display: inline-block;
-			margin-bottom: 20px;
-			padding-left: 22px;
-			color:  #191919;
-			font-family: $serif-light;
-			font-size: 22px;
-			font-weight: 400;
-		}
-		p {
-			padding-left: 65px;
-			font-family: $san-light;
-			font-size: 14px;
-			line-height: 1.5;
-			color: $mediumgray;
-		}
-	}
-	.owl-theme .owl-controls {
-		padding: 20px 0;
-		position: relative;
-		min-width: 50px;
-	}
+  display: block;
+  margin: 0 20px;
+  padding: 30px 0;
+  @include calc(width, '100% - 40px');
+  @include media-min-width(mobile) {
+    margin: 0 30px;
+    @include calc(width, '100% - 60px');
+  }
+  @include media-min-width(large) {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .col {
+    margin: 10px;
+    @include calc(width, '100%-20px');
+    i {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      font-size: 20px;
+      color: $lightgreen;
+      border: 2px solid $lightgreen;
+      @include prefix(border-radius, 50%, webkit ms);
+    }
+    h3 {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding-left: 22px;
+      color:  #191919;
+      font-family: $serif-light;
+      font-size: 22px;
+      font-weight: 400;
+    }
+    p {
+      padding-left: 65px;
+      font-family: $san-light;
+      font-size: 14px;
+      line-height: 1.5;
+      color: $mediumgray;
+    }
+  }
+  .owl-theme .owl-controls {
+    padding: 20px 0;
+    position: relative;
+    min-width: 50px;
+  }
 }
