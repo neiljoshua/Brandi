@@ -1,35 +1,35 @@
 // animation
 @mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
-    }
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }
-    @keyframes #{$animation-name} {
-        @content;
-    }
+		@-webkit-keyframes #{$animation-name} {
+				@content;
+		}
+		@-moz-keyframes #{$animation-name} {
+				@content;
+		}
+		@-ms-keyframes #{$animation-name} {
+				@content;
+		}
+		@-o-keyframes #{$animation-name} {
+				@content;
+		}
+		@keyframes #{$animation-name} {
+				@content;
+		}
 }
 
 @mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};
 }
 
 // CSS3 calc() function to perform calculations
 @mixin calc($property, $expression) {
-  #{$property}: -webkit-calc(#{$expression});
-  #{$property}: -moz-calc(#{$expression});
-  #{$property}: calc(#{$expression});
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: calc(#{$expression});
 }
 
 /// Mixin to prefix a property
@@ -38,49 +38,49 @@
 /// @param {*} $value - Property value
 /// @param {List} $prefixes (()) - List of prefixes to print
 @mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
-  }
+	@each $prefix in $prefixes {
+		#{'-' + $prefix + '-' + $property}: $value;
+	}
 
-  // Output standard non-prefixed declaration
-  #{$property}: $value;
+	// Output standard non-prefixed declaration
+	#{$property}: $value;
 }
 
 // media queries
 @mixin media($type) {
-    @if $type == large {
-        @media (max-width: 980px) { @content; }
-    }
-    @if $type == tablet {
-        @media (max-width: 768px)  { @content; }
-    }
-    @else if $type == mobile {
-        @media (max-width: 600px)  { @content; }
-    }
+		@if $type == large {
+				@media (max-width: 980px) { @content; }
+		}
+		@if $type == tablet {
+				@media (max-width: 768px)  { @content; }
+		}
+		@else if $type == mobile {
+				@media (max-width: 600px)  { @content; }
+		}
 }
 
 // media queries max-width()
 @mixin media-max-width($type) {
-    @if $type == large {
-        @media (max-width: 1024px) { @content; }
-    }
-    @if $type == tablet {
-        @media (max-width: 768px)  { @content; }
-    }
-    @else if $type == mobile {
-        @media (max-width: 600px)  { @content; }
-    }
+		@if $type == large {
+				@media (max-width: 1024px) { @content; }
+		}
+		@if $type == tablet {
+				@media (max-width: 768px)  { @content; }
+		}
+		@else if $type == mobile {
+				@media (max-width: 600px)  { @content; }
+		}
 }
 
 // media queries min-width()
 @mixin media-min-width($type) {
-    @if $type == large {
-        @media (min-width: 1024px + 1) { @content; }
-    }
-    @if $type == tablet {
-        @media (min-width: 768px + 1)  { @content; }
-    }
-    @else if $type == mobile {
-        @media (min-width: 600px + 1)  { @content; }
-    }
+		@if $type == large {
+				@media (min-width: 1024px + 1) { @content; }
+		}
+		@if $type == tablet {
+				@media (min-width: 768px + 1)  { @content; }
+		}
+		@else if $type == mobile {
+				@media (min-width: 600px + 1)  { @content; }
+		}
 }
