@@ -27,8 +27,9 @@ $(document).ready(function() {
 
 	$('.filter-link').on('click', function(e){
 		e.preventDefault();
-		var activeLink = $(this);
-		var linkHref = $(this).attr('href');
+		var activeLink = $(this),
+				linkHref = $(this).attr('href');
+
 		$('.filter-link').removeClass('active');
 		$(activeLink).addClass('active');
 
@@ -70,8 +71,9 @@ $(document).ready(function() {
 
 		e.preventDefault();
 
-		var $form  = $(this);
-		var $email = $("#email");
+		var $form  = $(this),
+				$email = $("#email");
+
 		if ( !window.validateEmail( $email.val() ) &&  ( $email.prop('required') ) ) {
 			$email.parent().addClass('invalid');
 			$(".error").fadeTo(400, 1);
@@ -143,8 +145,8 @@ $(document).ready(function() {
 
 	function counterUp(){
 		$('.counter').each(function() {
-			var $this = $(this);
-			var countTo = $this.attr('data-count');
+			var $this = $(this),
+					countTo = $this.attr('data-count');
 
 			$({ countNum: $this.text()}).animate({
 				countNum: countTo

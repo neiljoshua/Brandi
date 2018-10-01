@@ -40,33 +40,33 @@ header {
 		z-index: 2000;
 		&:after {
 			content: "";
-	    height: 19px;
-	    width: 3px;
-	    background-color: $white;
-	    display: inline-block;
-	    padding-top: 3px;
-	    margin-top: 10px;
-	    margin-left: 4px;
-	    margin-right: 4px;
-	    @include media-min-width(mobile) {
-	    	margin-left: 5px;
-	    	margin-right: 5px;
-	    }
-	    @include media-min-width(tablet) {
-	    	margin-left: 8px;
-	    	margin-right: 8px;
-	    }
-	    @include media-min-width(large) {
-	    	margin-left: 15px;
-	    	margin-right: 15px;
-	    }
+			height: 19px;
+			width: 3px;
+			background-color: $white;
+			display: inline-block;
+			padding-top: 3px;
+			margin-top: 10px;
+			margin-left: 4px;
+			margin-right: 4px;
+			@include media-min-width(mobile) {
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+			@include media-min-width(tablet) {
+				margin-left: 8px;
+				margin-right: 8px;
+			}
+			@include media-min-width(large) {
+				margin-left: 15px;
+				margin-right: 15px;
+			}
 		}
 		&:hover {
 			cursor: pointer
 		}
 	}
- 	p {
- 		padding-top: 10px;
+	p {
+		padding-top: 10px;
 		font-size: 10px;
 		color: $gray;
 		@include media-min-width(mobile) {
