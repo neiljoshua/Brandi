@@ -2,21 +2,21 @@
 	background: url('/src/images/city.jpg');
 	color: $white;
 	margin: 0 auto;
-  clear: both;
+	clear: both;
 	overflow: hidden;
 
 	.col {
-	 	width: 100%;
-  	text-align: center;
-  	padding: 35px 0;
-  	@include media-min-width(mobile) {
-  		width: 50%;
-	 		float: left;
-  	}
-  	@include media-min-width(tablet) {
-  		width: 25%;
-  	}
-  	i{
+		width: 100%;
+		text-align: center;
+		padding: 35px 0;
+		@include media-min-width(mobile) {
+			width: 50%;
+			float: left;
+		}
+		@include media-min-width(tablet) {
+			width: 25%;
+		}
+		i{
 			display: block;
 			margin: 0 auto;
 			font-size: 40px;

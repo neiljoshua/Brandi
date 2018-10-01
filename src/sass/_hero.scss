@@ -4,11 +4,11 @@
 	.owl-theme .owl-controls {
 		display: none;
 		@include media-min-width(tablet) {
-		  position: absolute;
-		  width: 10px;
-		  right: 25px;
-		  top: 50%;
-		  transform: translateY(-50%);
+			position: absolute;
+			width: 10px;
+			right: 25px;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 	@include media-min-width(tablet) {
@@ -88,20 +88,20 @@
 		text-align: center;
 		bottom: 0;
 		margin-bottom: 40px;
-	  @include media-min-width(tablet) {
-	  	position: absolute;
+		@include media-min-width(tablet) {
+			position: absolute;
 			bottom: 50px;
 			left: 50%;
-		  transform: translateX(-50%);
-		  margin-bottom: 0;
-	  }
-	  a {
-	  	font-size: 20px;
-	  	color: $gray;
-	  	&:hover {
-	  		color: $white;
-	  	}
-	  }
+			transform: translateX(-50%);
+			margin-bottom: 0;
+		}
+		a {
+			font-size: 20px;
+			color: $gray;
+			&:hover {
+				color: $white;
+			}
+		}
 	}
 }
 
