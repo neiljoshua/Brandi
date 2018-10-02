@@ -92,13 +92,13 @@
       font-size: 20px;
       margin:10px 0;
       display: inline-block;
+      @include prefix(transition, color 0.6s ease-in-out, webkit ms);
+      &:hover {
+        color: $green;
+        @include prefix(transition, color 0.6s ease-in-out, webkit ms);
+      }
       @include media-min-width(tablet) {
         display: block;
-        @include prefix(transition, color 0.6s ease-in-out, webkit ms);
-        &:hover {
-          color: $green;
-          @include prefix(transition, color 0.6s ease-in-out, webkit ms);
-        }
       }
     }
   }

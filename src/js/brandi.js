@@ -1,8 +1,7 @@
 (function($){
   'use strict';
     $(window).on('load', function () {
-      if ($(".loader").length > 0)
-      {
+      if ($(".loader").length > 0) {
         $(".loader").fadeOut("slow");
         $('.wrapper').addClass('loaded');
       }
@@ -13,11 +12,10 @@ $(document).ready(function() {
 
   var $window = $(window),
       $hero = $('.hero-content'),
-      $header =$('header'),
+      $header = $('header'),
       $menu = $('#overlay-menu'),
-      $body =$('body'),
-      $burger =$('.hamburger'),
-      headerHeight = $('.menu-nav').outerHeight();
+      $body = $('body'),
+      $burger = $('.hamburger');
 
   $('.hamburger').on('click', function(e){
     e.preventDefault();
@@ -25,7 +23,7 @@ $(document).ready(function() {
     $('.overlay').toggleClass('active-overlay');
   });
 
-  $('.filter-link').on('click', function(e){
+  $('.filter-link').on('touchstart click', function(e){
     e.preventDefault();
     var activeLink = $(this),
         linkHref = $(this).attr('href');
@@ -37,11 +35,11 @@ $(document).ready(function() {
     $('.brand-box').removeClass('active-img').addClass('inactive-img');
     activeImg.removeClass('inactive-img').addClass('active-img');
 
-    if(linkHref=="allPhotos"){
+    if(linkHref=="all-photos"){
       $('.brand-box').removeClass('inactive-img').addClass('active-img');
     }
 
-  })
+  });
 
   $("#home-slider").owlCarousel({
     navigation : false,
@@ -74,12 +72,11 @@ $(document).ready(function() {
     var $form  = $(this),
         $email = $("#email");
 
-    if ( !window.validateEmail( $email.val() ) &&  ( $email.prop('required') ) ) {
+    if( !window.validateEmail( $email.val() ) &&  ( $email.prop('required') ) ) {
       $email.parent().addClass('invalid');
       $(".error").fadeTo(400, 1);
 
     } else {
-
       $email.parent().removeClass('invalid')
       $(".error").fadeTo(400, 0);
       var url = "contact.php";
@@ -129,58 +126,61 @@ $(document).ready(function() {
         emailArray   = (emails == null) ? [] :emails.split(','),
         expression   = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    $(emailArray).each(function(index, email){
+    $(emailArray).each(function(index, email) {
 
-      if( !expression.test( email.trim() ) ){
+      if( !expression.test( email.trim() ) ) {
         errors++;
       }
 
     });
 
-    if( errors > 0 ){
+    if( errors > 0 ) {
       return false;
-    }else{
+    } else {
       return true;
     }
+
   }
 
-  function counterUp(){
-    $('.counter').each(function() {
-      var $this = $(this),
-          countTo = $this.attr('data-count');
+  function counterUp() {
 
-      $({ countNum: $this.text()}).animate({
+    $('.counter').each(function() {
+      var counter = $(this),
+          countTo = counter.attr('data-count');
+
+      $({ countNum: counter.text()}).animate({
         countNum: countTo
       },
       {
         duration: 900,
         easing:'linear',
         step: function() {
-          $this.text(Math.floor(this.countNum));
+          counter.text(Math.floor(this.countNum));
         },
         complete: function() {
-          $this.text(this.countNum);
+          counter.text(this.countNum);
         }
       });
     });
   }
 
-  function cleanCounter(){
+  function cleanCounter() {
+
     $('.counter').each(function() {
-      var $this = $(this);
-      $this.text('9');
+      var counter = $(this);
+      counter.text('9');
     });
 
   }
 
-  function counter(){
+  function counter() {
 
     var docViewTop = $(window).scrollTop(),
         docViewBottom =docViewTop + $(window).height(),
-        elemTop = $('.counter').offset().top,
-        elemBott = elemTop + $('.counter').height();
+        elemTop = $('.fun-facts').offset().top,
+        elemBott = elemTop + $('.fun-facts').height();
 
-    if ((docViewBottom >= elemTop) && (elemBott >= docViewTop) ){
+    if((docViewBottom >= elemTop) && (elemBott >= docViewTop) ) {
       counterUp();
     } else {
         cleanCounter();
@@ -188,10 +188,10 @@ $(document).ready(function() {
 
   }
 
-  function checkWidth(){
+  function checkWidth() {
 
-    if ($window.width() > 980) {
-      if ($burger.hasClass('is-active')) {
+    if($window.width() > 980) {
+      if($burger.hasClass('is-active')) {
         $('.overlay').toggleClass('active-overlay');
         $('.hamburger').toggleClass('is-active');
       }
@@ -204,7 +204,7 @@ $(document).ready(function() {
       var scrollDistance = $(window).scrollTop();
 
       function changeMenuColor() {
-        if (scrollDistance >= 200) {
+        if(scrollDistance >= 200) {
             $('header').addClass('green-menu');
         }else {
             $('header').removeClass('green-menu');
@@ -214,7 +214,7 @@ $(document).ready(function() {
       counter();
 
       $('.page-section').each(function(i) {
-          if ( $(this).position().top <= scrollDistance+60 ) {
+          if( $(this).position().top <= scrollDistance+60 ) {
              $('.overlay-menu a.active').removeClass('active');
              $('.overlay-menu a').eq(i).addClass('active');
           }
