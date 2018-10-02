@@ -99,7 +99,12 @@
       font-size: 20px;
       color: $gray;
       &:hover {
+        color: $green;
+      }
+      @include media-min-width(tablet) {
+         &:hover {
         color: $white;
+      }
       }
     }
   }
