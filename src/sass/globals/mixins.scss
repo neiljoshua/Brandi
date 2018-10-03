@@ -48,7 +48,7 @@
 
 // media queries
 @mixin media($type) {
-  @if $type == large {
+  @if $type == desktop {
     @media (max-width: 980px) { @content; }
   }
   @if $type == tablet {
@@ -61,7 +61,7 @@
 
 // media queries max-width()
 @mixin media-max-width($type) {
-  @if $type == large {
+  @if $type == desktop {
     @media (max-width: 1024px) { @content; }
   }
   @if $type == tablet {
@@ -74,7 +74,7 @@
 
 // media queries min-width()
 @mixin media-min-width($type) {
-  @if $type == large {
+  @if $type == desktop {
     @media (min-width: 1024px + 1) { @content; }
   }
   @if $type == tablet {

@@ -12,7 +12,7 @@
     margin: 0 30px;
     @include calc(width, '100% - 60px');
   }
-  @include media-min-width(large) {
+  @include media-min-width(desktop) {
     max-width: 980px;
     margin: 0 auto;
   }
