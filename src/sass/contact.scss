@@ -14,7 +14,7 @@
       margin: 50px 40px;
       @include calc(width, '100 - 80px');
     }
-    @include media-min-width(large) {
+    @include media-min-width(desktop) {
       max-width: 1024px;
       margin: 50px auto;
     }

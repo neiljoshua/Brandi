@@ -23,7 +23,7 @@ footer {
   @include media-min-width(tablet) {
     margin: 50px 30px;
   }
-  @include media-min-width(large) {
+  @include media-min-width(desktop) {
     margin: 60px auto;
     max-width: 980px;
   }
@@ -80,7 +80,7 @@ footer {
       text-align: left;
       line-height: 2;
     }
-    @include media-min-width(large) {
+    @include media-min-width(desktop) {
       font-size: 14px;
     }
   }
@@ -92,7 +92,7 @@ footer {
       text-align: left;
       font-size: 14px;
     }
-    @include media-min-width(large) {
+    @include media-min-width(desktop) {
       font-size: 14px;
     }
   }
@@ -116,7 +116,7 @@ footer {
         font-size: 12px;
         text-align: right;
       }
-      @include media-min-width(large) {
+      @include media-min-width(desktop) {
         font-size: 14px;
       }
     }
@@ -127,7 +127,7 @@ footer {
       @include media-min-width(tablet) {
         font-size: 12px;
       }
-      @include media-min-width(large) {
+      @include media-min-width(desktop) {
         font-size: 14px;
       }
 

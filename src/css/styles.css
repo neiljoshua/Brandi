@@ -1199,16 +1199,28 @@ footer .icon-heart-empty, footer span {
 }
 /* line 83, ../sass/works.scss */
 .details h3 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-/* line 88, ../sass/works.scss */
+@media (min-width: 769px) {
+  /* line 83, ../sass/works.scss */
+  .details h3 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1025px) {
+  /* line 83, ../sass/works.scss */
+  .details h3 {
+    font-size: 20px;
+  }
+}
+/* line 94, ../sass/works.scss */
 .details p {
   font-size: 12px;
 }
 
-/* line 95, ../sass/works.scss */
+/* line 101, ../sass/works.scss */
 .inactive-img {
   visibility: hidden;
   opacity: 0;
@@ -1216,7 +1228,7 @@ footer .icon-heart-empty, footer span {
   height: 0;
 }
 
-/* line 102, ../sass/works.scss */
+/* line 108, ../sass/works.scss */
 .active-img {
   visibility: visible;
   opacity: 1;
